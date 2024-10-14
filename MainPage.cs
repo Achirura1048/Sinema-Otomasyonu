@@ -38,7 +38,7 @@ namespace Sinema_Otomasyonu
 
         private void adminreg_Click(object sender, EventArgs e)
         {
-            DiractorReg DrcReg = new DiractorReg();
+            DirectorReg DrcReg = new DirectorReg();
 
             Functions.ShowFormCentered(DrcReg, panel1 , panel2 , panel3);
 
@@ -51,8 +51,7 @@ namespace Sinema_Otomasyonu
 
         private void DrcList_Click(object sender, EventArgs e)
         {
-            DiractorList DrcList = new DiractorList();
-            Functions.ShowFormCentered(DrcList, panel1, panel2, panel3);
+
         }
     }
 }

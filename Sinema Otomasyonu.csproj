@@ -46,17 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DiractorList.cs">
+    <Compile Include="DirectorReg.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DiractorList.Designer.cs">
-      <DependentUpon>DiractorList.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DiractorReg.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DiractorReg.Designer.cs">
-      <DependentUpon>DiractorReg.cs</DependentUpon>
+    <Compile Include="DirectorReg.Designer.cs">
+      <DependentUpon>DirectorReg.cs</DependentUpon>
     </Compile>
     <Compile Include="Functions.cs" />
     <Compile Include="LoginPage.cs">
@@ -74,11 +68,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Secrets.cs" />
-    <EmbeddedResource Include="DiractorList.resx">
-      <DependentUpon>DiractorList.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DiractorReg.resx">
-      <DependentUpon>DiractorReg.cs</DependentUpon>
+    <EmbeddedResource Include="DirectorReg.resx">
+      <DependentUpon>DirectorReg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>

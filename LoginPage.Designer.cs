@@ -105,6 +105,7 @@
             this.user.Name = "user";
             this.user.Size = new System.Drawing.Size(229, 20);
             this.user.TabIndex = 1;
+            this.user.TextChanged += new System.EventHandler(this.user_TextChanged);
             // 
             // contextMenuStrip1
             // 

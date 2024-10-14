@@ -87,5 +87,9 @@ namespace Sinema_Otomasyonu
             connection.Close();
         }
 
+        private void user_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
