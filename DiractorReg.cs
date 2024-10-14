@@ -15,7 +15,7 @@ namespace Sinema_Otomasyonu
 {
     public partial class DiractorReg : Form
     {
-        SqlConnection connection = new SqlConnection("Data Source=DESKTOP-MOGD8OP\\SQLEXPRESS;Initial Catalog=AchiCinema;Integrated Security=True");
+        SqlConnection connection = new SqlConnection(Secrets.DB_Path);
         public DiractorReg()
         {
             InitializeComponent();    
@@ -258,6 +258,9 @@ namespace Sinema_Otomasyonu
 
         }
 
+        private void r_img_Click_1(object sender, EventArgs e)
+        {
 
+        }
     }
 }

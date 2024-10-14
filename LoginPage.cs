@@ -21,7 +21,7 @@ namespace Sinema_Otomasyonu
             InitializeComponent();
         }
         
-        SqlConnection connection = new SqlConnection("Data Source=DESKTOP-MOGD8OP\\SQLEXPRESS;Initial Catalog=AchiCinema;Integrated Security=True");
+        SqlConnection connection = new SqlConnection(Secrets.DB_Path);
 
         private void Form1_Load(object sender, EventArgs e)
         {

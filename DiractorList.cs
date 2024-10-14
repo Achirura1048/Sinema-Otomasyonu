@@ -16,5 +16,10 @@ namespace Sinema_Otomasyonu
         {
             InitializeComponent();
         }
+
+        private void DiractorList_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

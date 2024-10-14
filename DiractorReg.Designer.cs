@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DiractorReg));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.error_bio = new System.Windows.Forms.Label();
+            this.error_surname = new System.Windows.Forms.Label();
+            this.error_name = new System.Windows.Forms.Label();
             this.r_bio = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -44,6 +47,7 @@
             this.r_name = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.error_img = new System.Windows.Forms.Label();
             this.r_img = new System.Windows.Forms.PictureBox();
             this.img_up = new System.Windows.Forms.Button();
             this.r_save = new System.Windows.Forms.Button();
@@ -52,10 +56,6 @@
             this.min_button = new System.Windows.Forms.Button();
             this.ex_button = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.error_name = new System.Windows.Forms.Label();
-            this.error_surname = new System.Windows.Forms.Label();
-            this.error_bio = new System.Windows.Forms.Label();
-            this.error_img = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -91,6 +91,36 @@
             this.groupBox1.Size = new System.Drawing.Size(678, 614);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
+            // 
+            // error_bio
+            // 
+            this.error_bio.AutoSize = true;
+            this.error_bio.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.error_bio.ForeColor = System.Drawing.Color.Red;
+            this.error_bio.Location = new System.Drawing.Point(10, 564);
+            this.error_bio.Name = "error_bio";
+            this.error_bio.Size = new System.Drawing.Size(0, 19);
+            this.error_bio.TabIndex = 24;
+            // 
+            // error_surname
+            // 
+            this.error_surname.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.error_surname.ForeColor = System.Drawing.Color.Red;
+            this.error_surname.Location = new System.Drawing.Point(342, 100);
+            this.error_surname.MaximumSize = new System.Drawing.Size(223, 30);
+            this.error_surname.Name = "error_surname";
+            this.error_surname.Size = new System.Drawing.Size(223, 30);
+            this.error_surname.TabIndex = 23;
+            // 
+            // error_name
+            // 
+            this.error_name.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.error_name.ForeColor = System.Drawing.Color.Red;
+            this.error_name.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.error_name.Location = new System.Drawing.Point(82, 100);
+            this.error_name.Name = "error_name";
+            this.error_name.Size = new System.Drawing.Size(208, 30);
+            this.error_name.TabIndex = 22;
             // 
             // r_bio
             // 
@@ -267,6 +297,16 @@
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             // 
+            // error_img
+            // 
+            this.error_img.AutoSize = true;
+            this.error_img.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.error_img.ForeColor = System.Drawing.Color.Red;
+            this.error_img.Location = new System.Drawing.Point(48, 357);
+            this.error_img.Name = "error_img";
+            this.error_img.Size = new System.Drawing.Size(0, 19);
+            this.error_img.TabIndex = 4;
+            // 
             // r_img
             // 
             this.r_img.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("r_img.BackgroundImage")));
@@ -280,6 +320,7 @@
             this.r_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.r_img.TabIndex = 3;
             this.r_img.TabStop = false;
+            this.r_img.Click += new System.EventHandler(this.r_img_Click_1);
             // 
             // img_up
             // 
@@ -381,47 +422,7 @@
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             // 
-            // error_name
-            // 
-            this.error_name.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.error_name.ForeColor = System.Drawing.Color.Red;
-            this.error_name.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.error_name.Location = new System.Drawing.Point(82, 100);
-            this.error_name.Name = "error_name";
-            this.error_name.Size = new System.Drawing.Size(208, 30);
-            this.error_name.TabIndex = 22;
-            // 
-            // error_surname
-            // 
-            this.error_surname.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.error_surname.ForeColor = System.Drawing.Color.Red;
-            this.error_surname.Location = new System.Drawing.Point(342, 100);
-            this.error_surname.MaximumSize = new System.Drawing.Size(223, 30);
-            this.error_surname.Name = "error_surname";
-            this.error_surname.Size = new System.Drawing.Size(223, 30);
-            this.error_surname.TabIndex = 23;
-            // 
-            // error_bio
-            // 
-            this.error_bio.AutoSize = true;
-            this.error_bio.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.error_bio.ForeColor = System.Drawing.Color.Red;
-            this.error_bio.Location = new System.Drawing.Point(10, 564);
-            this.error_bio.Name = "error_bio";
-            this.error_bio.Size = new System.Drawing.Size(0, 19);
-            this.error_bio.TabIndex = 24;
-            // 
-            // error_img
-            // 
-            this.error_img.AutoSize = true;
-            this.error_img.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.error_img.ForeColor = System.Drawing.Color.Red;
-            this.error_img.Location = new System.Drawing.Point(48, 357);
-            this.error_img.Name = "error_img";
-            this.error_img.Size = new System.Drawing.Size(0, 19);
-            this.error_img.TabIndex = 4;
-            // 
-            // AdminReg
+            // DiractorReg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -431,7 +432,7 @@
             this.Controls.Add(this.r_save);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AdminReg";
+            this.Name = "DiractorReg";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "AdminReg";
             this.TopMost = true;
