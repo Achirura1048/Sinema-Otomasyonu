@@ -36,7 +36,7 @@ namespace Sinema_Otomasyonu
            label2.Text = "Hoş Geldin " + name +" "+surname.ToUpper();
         }
 
-        private void adminreg_Click(object sender, EventArgs e)
+        public void adminreg_Click(object sender, EventArgs e)
         {
             DirectorReg DrcReg = new DirectorReg();
 
@@ -51,7 +51,8 @@ namespace Sinema_Otomasyonu
 
         private void DrcList_Click(object sender, EventArgs e)
         {
-
+            DirectorList DrcList = new DirectorList();
+            Functions.ShowFormCentered(DrcList, panel1, panel2, panel3);
         }
     }
 }

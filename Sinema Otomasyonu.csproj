@@ -46,35 +46,59 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DirectorReg.cs">
+    <Compile Include="Forms\DirectorList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DirectorReg.Designer.cs">
+    <Compile Include="Forms\DirectorList.Designer.cs">
+      <DependentUpon>DirectorList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DirectorUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DirectorUpdate.Designer.cs">
+      <DependentUpon>DirectorUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DirectorReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DirectorReg.Designer.cs">
       <DependentUpon>DirectorReg.cs</DependentUpon>
     </Compile>
-    <Compile Include="Functions.cs" />
-    <Compile Include="LoginPage.cs">
+    <Compile Include="Classes\Functions.cs" />
+    <Compile Include="Forms\LoginPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginPage.Designer.cs">
+    <Compile Include="Forms\LoginPage.Designer.cs">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainPage.cs">
+    <Compile Include="Forms\MainPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainPage.Designer.cs">
+    <Compile Include="Forms\MainPage.Designer.cs">
       <DependentUpon>MainPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Secrets.cs" />
-    <EmbeddedResource Include="DirectorReg.resx">
+    <Compile Include="Classes\Secrets.cs" />
+    <Compile Include="UserControls\DirectorListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DirectorListControl.Designer.cs">
+      <DependentUpon>DirectorListControl.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\DirectorList.resx">
+      <DependentUpon>DirectorList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DirectorUpdate.resx">
+      <DependentUpon>DirectorUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DirectorReg.resx">
       <DependentUpon>DirectorReg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginPage.resx">
+    <EmbeddedResource Include="Forms\LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainPage.resx">
+    <EmbeddedResource Include="Forms\MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -86,6 +110,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserControls\DirectorListControl.resx">
+      <DependentUpon>DirectorListControl.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

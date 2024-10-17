@@ -53,7 +53,6 @@
             this.r_save = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.min_button = new System.Windows.Forms.Button();
             this.ex_button = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
@@ -367,7 +366,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(59)))), ((int)(((byte)(111)))));
-            this.panel1.Controls.Add(this.min_button);
             this.panel1.Controls.Add(this.ex_button);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -375,23 +373,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1175, 40);
             this.panel1.TabIndex = 2;
-            // 
-            // min_button
-            // 
-            this.min_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(128)))), ((int)(((byte)(147)))));
-            this.min_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.min_button.Dock = System.Windows.Forms.DockStyle.Right;
-            this.min_button.FlatAppearance.BorderSize = 0;
-            this.min_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.min_button.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.min_button.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.min_button.Location = new System.Drawing.Point(1090, 0);
-            this.min_button.Name = "min_button";
-            this.min_button.Size = new System.Drawing.Size(45, 40);
-            this.min_button.TabIndex = 2;
-            this.min_button.Text = "-";
-            this.min_button.UseVisualStyleBackColor = false;
-            this.min_button.Click += new System.EventHandler(this.min_button_Click);
             // 
             // ex_button
             // 
@@ -422,20 +403,19 @@
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             // 
-            // DiractorReg
+            // DirectorReg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.ClientSize = new System.Drawing.Size(1175, 721);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.r_save);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "DiractorReg";
+            this.Name = "DirectorReg";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "AdminReg";
-            this.TopMost = true;
             this.Load += new System.EventHandler(this.AdminReg_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -470,7 +450,6 @@
         private System.Windows.Forms.Button r_save;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button min_button;
         private System.Windows.Forms.Button ex_button;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox r_bio;
