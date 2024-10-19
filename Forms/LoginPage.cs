@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
+using System.Data.Linq;
+using System.Data.Linq.Mapping;
+using Sinema_Otomasyonu.Classes;
 namespace Sinema_Otomasyonu
 {
     public partial class Sinema : Form
@@ -21,7 +24,7 @@ namespace Sinema_Otomasyonu
             InitializeComponent();
         }
         
-        SqlConnection connection = new SqlConnection(Secrets.DB_Path);
+        
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -47,36 +50,34 @@ namespace Sinema_Otomasyonu
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-             connection.Open();
-             SqlCommand sorgula = new SqlCommand("select KADI,KSIFRE,AD,SOYAD from User_Info WHERE KADI=@usr AND KSIFRE=@psw",connection);
-             sorgula.Parameters.AddWithValue("@usr", user.Text);
-             sorgula.Parameters.AddWithValue("@psw", psw.Text);
              
-            SqlDataReader rd = sorgula.ExecuteReader();
+
             
-            if (rd.Read())
+            using (AchiDBContext ac = new AchiDBContext(Secrets.DB_Path))
             {
-                MainPage mainPage = new MainPage();
-                MainPage.name = rd["AD"].ToString();
-                MainPage.surname = rd["SOYAD"].ToString();
+                var user_info = ac.Users
+                    .FirstOrDefault(u => u.KADI == user.Text && u.KSIFRE == psw.Text);
+
+                if(user_info != null)
+                {
+                    MainPage.name = user_info.AD;
+                    MainPage.surname = user_info.SOYAD;
 
 
-                var workingAreaWidth = Screen.PrimaryScreen.Bounds.Width;
-                var workingAreaHeight = Screen.PrimaryScreen.Bounds.Height;
+                    MainPage mainpage = new MainPage();
+                    var workingAreaWidth = Screen.PrimaryScreen.Bounds.Width;
+                    var workingAreaHeight = Screen.PrimaryScreen.Bounds.Height;
 
 
-                mainPage.Size = new System.Drawing.Size(workingAreaWidth, workingAreaHeight);
+                    mainpage.Size = new System.Drawing.Size(workingAreaWidth, workingAreaHeight);
+                    mainpage.Show();
+                    this.Hide();
+                }
 
-                mainPage.Show();
-
-
-
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Kullanıcı adı veya şifre hatalı");
-                psw.Text = "";
+                else
+                {
+                    MessageBox.Show("Kullanıcı Adı veya Şifre Hatalı");
+                }
             }
             
 
@@ -84,7 +85,7 @@ namespace Sinema_Otomasyonu
             user.Focus();
 
 
-            connection.Close();
+            
         }
 
         private void user_TextChanged(object sender, EventArgs e)

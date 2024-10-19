@@ -11,11 +11,13 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using System.IO;
 using System.Security.Cryptography;
+using Sinema_Otomasyonu.Classes;
+using Sinema_Otomasyonu.Classes.Tables;
 namespace Sinema_Otomasyonu
 {
     public partial class DirectorReg : Form
     {
-        SqlConnection connection = new SqlConnection(Secrets.DB_Path);
+        
         public DirectorReg()
         {
             InitializeComponent();    
@@ -152,12 +154,28 @@ namespace Sinema_Otomasyonu
                 File.Copy(imgpath, TargetDir, true);
                 r_img.Image = Image.FromFile(TargetDir);
 
-                connection.Open();
-                SqlCommand register = new SqlCommand("INSERT INTO Director_Info(AD,SOYAD,DOGUM,CINSIYET,RESIM,BIO) VALUES(@name,@surname,@bdate,@gender,@img,@bio)", connection);
-                Functions.Register(register, r_name, r_surname, r_date, r_gender, TargetDir, r_bio);
+               
+                using (AchiDBContext ac = new AchiDBContext(Secrets.DB_Path))
+                {
+                    Directors newDirector = new Directors
+                    {
+                        AD = r_name.Text,
+                        SOYAD = r_name.Text,
+                        CINSIYET = r_gender,
+                        DOGUM = r_date.Value.ToString("yyyy-MM-dd"),
+                        RESIM = imgpath,
+                        BIO = r_bio.Text
+
+                    };
+
+                    ac.GetTable<Directors>().InsertOnSubmit(newDirector);
+
+                    ac.SubmitChanges();
+                }
+
                 MessageBox.Show("Yönetmen Kaydı Başarılı");
                 r_img.Image = null;
-                connection.Close();
+               
 
 
                // }

@@ -123,7 +123,7 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // DirectorList
+            // DirectorListControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -136,7 +136,7 @@
             this.Controls.Add(this.name);
             this.Controls.Add(this.img);
             this.Controls.Add(this.panel1);
-            this.Name = "DirectorList";
+            this.Name = "DirectorListControl";
             this.Size = new System.Drawing.Size(616, 142);
             this.Load += new System.EventHandler(this.DirectorList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.img)).EndInit();
