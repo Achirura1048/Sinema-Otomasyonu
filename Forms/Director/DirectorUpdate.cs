@@ -11,20 +11,21 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using System.IO;
 using System.Security.Cryptography;
+using Sinema_Otomasyonu.Classes.Tables;
+using Sinema_Otomasyonu.Classes;
 namespace Sinema_Otomasyonu
 {
     public partial class DirectorUpdate : Form
     {
-        SqlConnection connection = new SqlConnection(Secrets.DB_Path);
+       
         public DirectorUpdate()
         {
             InitializeComponent();    
         }
         private void AdminReg_Load(object sender, EventArgs e)
         {
+
             
-            /*r_img.Image = null;
-            MessageBox.Show(r_img.ImageLocation);*/
 
         }
 
@@ -65,32 +66,32 @@ namespace Sinema_Otomasyonu
         {
             
         }
-        public static char r_gender = 'M';
-        private void male_CheckedChanged(object sender, EventArgs e)
+        public char r_gender = 'M';
+        public void male_CheckedChanged(object sender, EventArgs e)
         {
             r_gender = 'M';
         }
 
         
 
-        private void female_CheckedChanged(object sender, EventArgs e)
+        public void female_CheckedChanged(object sender, EventArgs e)
         {
             r_gender = 'F';
         }
 
-        
 
-        
+
+
         private void button2_Click(object sender, EventArgs e)
         {
             if (r_name.Text == "" || r_surname.Text == "" || r_bio.Text == "" || r_img.ImageLocation == null)
             {
-                
+
                 System.Media.SystemSounds.Beep.Play();
 
                 switch (r_name.Text)
                 {
-                    
+
                     case "":
                         error_name.Text = "İsim Alanı Boş Bırakılamaz";
                         break;
@@ -130,57 +131,60 @@ namespace Sinema_Otomasyonu
             else
             {
                 //if (!string.IsNullOrEmpty(imgpath))
-               // {
+                // {
 
-                    string Account_Name = Environment.UserName;
-                    string LocalDir = $@"C:\Users\{Account_Name}\AppData\Local\Achi Cinema\Director_Images";
+                string Account_Name = Environment.UserName;
+                string LocalDir = $@"C:\Users\{Account_Name}\AppData\Local\Achi Cinema\Director_Images";
 
-                    if (!Directory.Exists(LocalDir))
+                if (!Directory.Exists(LocalDir))
+                {
+                    Directory.CreateDirectory(LocalDir);
+
+                    /*string ImgDir = Path.Combine(LocalDir, "Director_Images");
+
+                    if (!Directory.Exists(ImgDir))
                     {
-                        Directory.CreateDirectory(LocalDir);
-
-                        /*string ImgDir = Path.Combine(LocalDir, "Director_Images");
-
-                        if (!Directory.Exists(ImgDir))
-                        {
-                            Directory.CreateDirectory(ImgDir);
-                        }*/
-                    }
+                        Directory.CreateDirectory(ImgDir);
+                    }*/
+                }
 
 
                 string TargetDir = Path.Combine(LocalDir, Path.GetFileName(imgpath));
                 File.Copy(imgpath, TargetDir, true);
                 r_img.Image = Image.FromFile(TargetDir);
 
-                connection.Open();
-                SqlCommand register = new SqlCommand("INSERT INTO Director_Info(AD,SOYAD,DOGUM,CINSIYET,RESIM,BIO) VALUES(@name,@surname,@bdate,@gender,@img,@bio)", connection);
-                Functions.Register(register, r_name, r_surname, r_date, r_gender, TargetDir, r_bio);
-                MessageBox.Show("Yönetmen Kaydı Başarılı");
-                r_img.Image = null;
-                connection.Close();
+
+                using (AchiDBContext ac = new AchiDBContext(Secrets.DB_Path))
+                {
+                    int Director_ID = int.Parse(r_id.Text);
+                    var Director_Update = ac.Directors
+                    .FirstOrDefault(d => d.ID == Director_ID);
 
 
-               // }
+                    Director_Update.AD = r_name.Text;
+                    Director_Update.SOYAD = r_surname.Text;
+                    Director_Update.CINSIYET = r_gender;
+                    Director_Update.DOGUM = r_date.Value;
+                    Director_Update.RESIM = imgpath;
+                    Director_Update.BIO = r_bio.Text;
+
+                    ac.SubmitChanges();
+                }
+
+                MessageBox.Show("Yönetmen Güncellendi");
+
+                this.Close();
+                MainPage mp = new MainPage();
+                DirectorList DrcList = new DirectorList();
+                Functions.ShowFormCentered(DrcList , mp.panel1 , mp.panel2 , mp.panel3);
+
+
 
 
             }
-
-            
         }
 
-        /*void age()
-{
-    string birth = r_date.Value.ToString("yyyy-MM-dd");
 
-    DateTime bday = Convert.ToDateTime(birth);
-    DateTime today = DateTime.Today;
-    int age = today.Year - bday.Year;
-
-    if(age < 0)
-    {
-        MessageBox.Show("Geçersiz Doğum Tarihi");
-    }
-}*/
         private void label8_Click(object sender, EventArgs e)
         {
 

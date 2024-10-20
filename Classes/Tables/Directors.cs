@@ -23,7 +23,7 @@ namespace Sinema_Otomasyonu.Classes.Tables
         public char CINSIYET { get; set; }
 
         [Column]
-        public string DOGUM { get; set; }
+        public DateTime DOGUM { get; set; }
 
         [Column]
         public string RESIM { get; set; }

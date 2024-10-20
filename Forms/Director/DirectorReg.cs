@@ -162,7 +162,7 @@ namespace Sinema_Otomasyonu
                         AD = r_name.Text,
                         SOYAD = r_name.Text,
                         CINSIYET = r_gender,
-                        DOGUM = r_date.Value.ToString("yyyy-MM-dd"),
+                        DOGUM = r_date.Value,
                         RESIM = imgpath,
                         BIO = r_bio.Text
 

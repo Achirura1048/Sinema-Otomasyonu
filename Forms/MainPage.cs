@@ -38,7 +38,7 @@ namespace Sinema_Otomasyonu
 
         public void adminreg_Click(object sender, EventArgs e)
         {
-            DirectorReg DrcReg = new DirectorReg();
+            ActorReg DrcReg = new DirectorReg();
 
             Functions.ShowFormCentered(DrcReg, panel1 , panel2 , panel3);
 

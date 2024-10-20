@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Media;
+using Sinema_Otomasyonu.Classes;
 
 namespace Sinema_Otomasyonu.UserControls
 {
@@ -21,16 +22,32 @@ namespace Sinema_Otomasyonu.UserControls
         SqlConnection connection = new SqlConnection(Secrets.DB_Path);
         private void edit_Click(object sender, EventArgs e)
         {
-            DirectorUpdate updt = new DirectorUpdate();
-            MainPage borders = new MainPage();
-            Functions.ShowFormCentered(updt, borders.panel1 , borders.panel2 , borders.panel3);
+            DirectorUpdate DU = new DirectorUpdate();
+            using (AchiDBContext ac = new AchiDBContext(Secrets.DB_Path))
+            {
 
-            
-            connection.Open();
-            SqlCommand get = new SqlCommand("select * from Director_Info(AD , SOYAD , DOGUM , CINSIYET , RESIM , BIO) where ID=@p1" , connection);
-            //SqlCommand update = new SqlCommand("UPDATE from Director_Info WHERE ID=@p1", connection);
 
-            connection.Close();
+                int Director_ID = int.Parse(ID.Text);
+
+                var Director_Edit = ac.Directors
+                    .FirstOrDefault(d => d.ID == Director_ID);
+
+                DU.r_id.Text = Director_Edit.ID.ToString();
+                DU.r_name.Text = Director_Edit.AD.ToString();
+                DU.r_surname.Text = Director_Edit.SOYAD.ToString();
+                DU.r_gender = Director_Edit.CINSIYET;
+                DU.r_date.Value = Director_Edit.DOGUM;
+                DU.r_bio.Text = Director_Edit.BIO.ToString();
+                DU.r_img.ImageLocation = Director_Edit.RESIM.ToString();
+
+
+
+            }
+
+
+            MainPage mp = new MainPage();
+            Functions.ShowFormCentered(DU, mp.panel1, mp.panel2, mp.panel3);
+
         }
 
         private void DirectorList_Load(object sender, EventArgs e)
@@ -49,14 +66,26 @@ namespace Sinema_Otomasyonu.UserControls
             
             if (result == DialogResult.Yes)
             {
+
+                using(AchiDBContext ac = new AchiDBContext(Secrets.DB_Path))
+                {
+                    int Director_ID = int.Parse(ID.Text);
+
+                    var Director_Delete = ac.Directors.FirstOrDefault(d => d.ID == Director_ID);
+
+                    ac.Directors.DeleteOnSubmit(Director_Delete);
+
+                    ac.SubmitChanges();
+                }
+                /*
                 connection.Open();
 
                 SqlCommand delete = new SqlCommand("delete from Director_Info WHERE ID=@p1", connection);
 
                 delete.Parameters.AddWithValue("@p1", ID.Text);
                 delete.ExecuteNonQuery();
-
-                connection.Close();
+                
+                connection.Close();*/
                 MessageBox.Show("YÖNETMEN BAŞARIYLA SİLİNDİ" , "YÖNETMEN SİLME İŞLEMİ", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 this.Hide();
                 
