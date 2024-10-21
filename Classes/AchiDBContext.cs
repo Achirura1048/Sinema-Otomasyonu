@@ -15,5 +15,7 @@ namespace Sinema_Otomasyonu.Classes
 
         public Table<Users> Users => GetTable<Users>();
         public Table<Directors> Directors => GetTable<Directors>();
+
+        public Table<Actors> Actors => GetTable<Actors>();
     }
 }

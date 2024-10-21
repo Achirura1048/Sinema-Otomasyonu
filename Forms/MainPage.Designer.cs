@@ -33,18 +33,39 @@
             this.ex_button = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.Act_List = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.DrcList = new System.Windows.Forms.Button();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.Act_Reg = new System.Windows.Forms.Button();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.DrcReg = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.panel10.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.panel14.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -108,24 +129,82 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(59)))), ((int)(((byte)(111)))));
-            this.panel2.Controls.Add(this.panel7);
-            this.panel2.Controls.Add(this.panel5);
+            this.panel2.Controls.Add(this.panel12);
             this.panel2.Controls.Add(this.panel6);
+            this.panel2.Controls.Add(this.panel11);
             this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.panel13);
             this.panel2.Controls.Add(this.panel4);
+            this.panel2.Controls.Add(this.panel14);
+            this.panel2.Controls.Add(this.panel5);
+            this.panel2.Controls.Add(this.panel7);
+            this.panel2.Controls.Add(this.panel10);
+            this.panel2.Controls.Add(this.panel9);
+            this.panel2.Controls.Add(this.panel8);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 40);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(325, 680);
             this.panel2.TabIndex = 2;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.White;
+            this.panel11.Controls.Add(this.button4);
+            this.panel11.Location = new System.Drawing.Point(0, 226);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(325, 42);
+            this.panel11.TabIndex = 8;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(59)))), ((int)(((byte)(111)))));
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(238)))), ((int)(((byte)(244)))));
+            this.button4.Location = new System.Drawing.Point(0, 0);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(325, 40);
+            this.button4.TabIndex = 5;
+            this.button4.Text = "Yönetmen Liste";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.White;
+            this.panel10.Controls.Add(this.Act_List);
+            this.panel10.Location = new System.Drawing.Point(0, 184);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(325, 42);
+            this.panel10.TabIndex = 7;
+            // 
+            // Act_List
+            // 
+            this.Act_List.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(59)))), ((int)(((byte)(111)))));
+            this.Act_List.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Act_List.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Act_List.FlatAppearance.BorderSize = 0;
+            this.Act_List.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Act_List.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Act_List.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(238)))), ((int)(((byte)(244)))));
+            this.Act_List.Location = new System.Drawing.Point(0, 0);
+            this.Act_List.Name = "Act_List";
+            this.Act_List.Size = new System.Drawing.Size(325, 40);
+            this.Act_List.TabIndex = 5;
+            this.Act_List.Text = "Oyuncu Listesi";
+            this.Act_List.UseVisualStyleBackColor = false;
+            this.Act_List.Click += new System.EventHandler(this.Act_List_Click);
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.Controls.Add(this.DrcList);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(0, 86);
+            this.panel7.Location = new System.Drawing.Point(-1, 96);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(325, 42);
             this.panel7.TabIndex = 6;
@@ -134,24 +213,75 @@
             // 
             this.DrcList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(59)))), ((int)(((byte)(111)))));
             this.DrcList.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DrcList.Dock = System.Windows.Forms.DockStyle.Top;
             this.DrcList.FlatAppearance.BorderSize = 0;
             this.DrcList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DrcList.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.DrcList.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(238)))), ((int)(((byte)(244)))));
-            this.DrcList.Location = new System.Drawing.Point(0, -1);
+            this.DrcList.Location = new System.Drawing.Point(0, 0);
             this.DrcList.Name = "DrcList";
             this.DrcList.Size = new System.Drawing.Size(325, 40);
             this.DrcList.TabIndex = 5;
-            this.DrcList.Text = "Yönetmen Liste";
+            this.DrcList.Text = "Yönetmen Listesi";
             this.DrcList.UseVisualStyleBackColor = false;
             this.DrcList.Click += new System.EventHandler(this.DrcList_Click);
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.White;
+            this.panel9.Controls.Add(this.Act_Reg);
+            this.panel9.Location = new System.Drawing.Point(0, 139);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(325, 42);
+            this.panel9.TabIndex = 7;
+            // 
+            // Act_Reg
+            // 
+            this.Act_Reg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(59)))), ((int)(((byte)(111)))));
+            this.Act_Reg.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Act_Reg.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Act_Reg.FlatAppearance.BorderSize = 0;
+            this.Act_Reg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Act_Reg.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Act_Reg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(238)))), ((int)(((byte)(244)))));
+            this.Act_Reg.Location = new System.Drawing.Point(0, 0);
+            this.Act_Reg.Name = "Act_Reg";
+            this.Act_Reg.Size = new System.Drawing.Size(325, 40);
+            this.Act_Reg.TabIndex = 5;
+            this.Act_Reg.Text = "Oyuncu Kayıt";
+            this.Act_Reg.UseVisualStyleBackColor = false;
+            this.Act_Reg.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.White;
+            this.panel8.Controls.Add(this.button1);
+            this.panel8.Location = new System.Drawing.Point(0, 271);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(325, 42);
+            this.panel8.TabIndex = 7;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(59)))), ((int)(((byte)(111)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(238)))), ((int)(((byte)(244)))));
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(325, 40);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Yönetmen Liste";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Controls.Add(this.DrcReg);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 44);
+            this.panel5.Location = new System.Drawing.Point(0, 50);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(325, 42);
             this.panel5.TabIndex = 4;
@@ -160,11 +290,12 @@
             // 
             this.DrcReg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(59)))), ((int)(((byte)(111)))));
             this.DrcReg.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DrcReg.Dock = System.Windows.Forms.DockStyle.Top;
             this.DrcReg.FlatAppearance.BorderSize = 0;
             this.DrcReg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DrcReg.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.DrcReg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(238)))), ((int)(((byte)(244)))));
-            this.DrcReg.Location = new System.Drawing.Point(0, -1);
+            this.DrcReg.Location = new System.Drawing.Point(0, 0);
             this.DrcReg.Name = "DrcReg";
             this.DrcReg.Size = new System.Drawing.Size(325, 40);
             this.DrcReg.TabIndex = 5;
@@ -211,6 +342,81 @@
             this.panel3.Size = new System.Drawing.Size(955, 60);
             this.panel3.TabIndex = 3;
             // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.White;
+            this.panel12.Controls.Add(this.button5);
+            this.panel12.Location = new System.Drawing.Point(0, 358);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(325, 42);
+            this.panel12.TabIndex = 11;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(59)))), ((int)(((byte)(111)))));
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(238)))), ((int)(((byte)(244)))));
+            this.button5.Location = new System.Drawing.Point(0, 0);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(325, 40);
+            this.button5.TabIndex = 5;
+            this.button5.Text = "Yönetmen Liste";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.White;
+            this.panel13.Controls.Add(this.button6);
+            this.panel13.Location = new System.Drawing.Point(0, 316);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(325, 42);
+            this.panel13.TabIndex = 9;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(59)))), ((int)(((byte)(111)))));
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(238)))), ((int)(((byte)(244)))));
+            this.button6.Location = new System.Drawing.Point(0, 0);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(325, 40);
+            this.button6.TabIndex = 5;
+            this.button6.Text = "Yönetmen Liste";
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.White;
+            this.panel14.Controls.Add(this.button7);
+            this.panel14.Location = new System.Drawing.Point(0, 403);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(325, 42);
+            this.panel14.TabIndex = 10;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(59)))), ((int)(((byte)(111)))));
+            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(238)))), ((int)(((byte)(244)))));
+            this.button7.Location = new System.Drawing.Point(0, 0);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(325, 40);
+            this.button7.TabIndex = 5;
+            this.button7.Text = "Yönetmen Liste";
+            this.button7.UseVisualStyleBackColor = false;
+            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -227,8 +433,15 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel11.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            this.panel14.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -247,5 +460,19 @@
         public System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Button Act_List;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Button Act_Reg;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Button button7;
     }
 }

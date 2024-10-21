@@ -58,25 +58,44 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\AchiDBContext.cs" />
+    <Compile Include="Classes\Tables\Actors.cs" />
     <Compile Include="Classes\Tables\Directors.cs" />
     <Compile Include="Classes\Tables\Users.cs" />
-    <Compile Include="Forms\DirectorList.cs">
+    <Compile Include="Forms\Actor\ActorList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\DirectorList.Designer.cs">
+    <Compile Include="Forms\Actor\ActorList.Designer.cs">
+      <DependentUpon>ActorList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Actor\ActorReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Actor\ActorReg.Designer.cs">
+      <DependentUpon>ActorReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Actor\ActorUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Actor\ActorUpdate.Designer.cs">
+      <DependentUpon>ActorUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Director\DirectorList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Director\DirectorList.Designer.cs">
       <DependentUpon>DirectorList.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\DirectorUpdate.cs">
+    <Compile Include="Forms\Director\DirectorReg.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\DirectorUpdate.Designer.cs">
-      <DependentUpon>DirectorUpdate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\DirectorReg.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\DirectorReg.Designer.cs">
+    <Compile Include="Forms\Director\DirectorReg.Designer.cs">
       <DependentUpon>DirectorReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Director\DirectorUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Director\DirectorUpdate.Designer.cs">
+      <DependentUpon>DirectorUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Functions.cs" />
     <Compile Include="Forms\LoginPage.cs">
@@ -94,20 +113,35 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Classes\Secrets.cs" />
+    <Compile Include="UserControls\ActorListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ActorListControl.Designer.cs">
+      <DependentUpon>ActorListControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\DirectorListControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\DirectorListControl.Designer.cs">
       <DependentUpon>DirectorListControl.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\DirectorList.resx">
+    <EmbeddedResource Include="Forms\Actor\ActorList.resx">
+      <DependentUpon>ActorList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Actor\ActorReg.resx">
+      <DependentUpon>ActorReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Actor\ActorUpdate.resx">
+      <DependentUpon>ActorUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Director\DirectorList.resx">
       <DependentUpon>DirectorList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\DirectorUpdate.resx">
-      <DependentUpon>DirectorUpdate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\DirectorReg.resx">
+    <EmbeddedResource Include="Forms\Director\DirectorReg.resx">
       <DependentUpon>DirectorReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Director\DirectorUpdate.resx">
+      <DependentUpon>DirectorUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
@@ -124,6 +158,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserControls\ActorListControl.resx">
+      <DependentUpon>ActorListControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\DirectorListControl.resx">
       <DependentUpon>DirectorListControl.cs</DependentUpon>
     </EmbeddedResource>

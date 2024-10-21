@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sinema_Otomasyonu.Forms.Actor;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -38,7 +39,7 @@ namespace Sinema_Otomasyonu
 
         public void adminreg_Click(object sender, EventArgs e)
         {
-            ActorReg DrcReg = new DirectorReg();
+            DirectorReg DrcReg = new DirectorReg();
 
             Functions.ShowFormCentered(DrcReg, panel1 , panel2 , panel3);
 
@@ -53,6 +54,24 @@ namespace Sinema_Otomasyonu
         {
             DirectorList DrcList = new DirectorList();
             Functions.ShowFormCentered(DrcList, panel1, panel2, panel3);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ActorReg ActReg = new ActorReg();
+            Functions.ShowFormCentered(ActReg, panel1, panel2, panel3);
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Act_List_Click(object sender, EventArgs e)
+        {
+            ActorList ActList = new ActorList();
+            Functions.ShowFormCentered(ActList, panel1, panel2, panel3);
+
         }
     }
 }

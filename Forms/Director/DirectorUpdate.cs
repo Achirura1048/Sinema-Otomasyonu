@@ -39,7 +39,8 @@ namespace Sinema_Otomasyonu
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private string imgpath = null;
+        private string imgpath;
+        public string TargetDir;
         private void button1_Click(object sender, EventArgs e)
         {
             
@@ -149,9 +150,7 @@ namespace Sinema_Otomasyonu
                 }
 
 
-                string TargetDir = Path.Combine(LocalDir, Path.GetFileName(imgpath));
-                File.Copy(imgpath, TargetDir, true);
-                r_img.Image = Image.FromFile(TargetDir);
+
 
 
                 using (AchiDBContext ac = new AchiDBContext(Secrets.DB_Path))
@@ -160,12 +159,23 @@ namespace Sinema_Otomasyonu
                     var Director_Update = ac.Directors
                     .FirstOrDefault(d => d.ID == Director_ID);
 
+                    if (imgpath == null)
+                    {
+                        TargetDir = Director_Update.RESIM;
+                    }
+
+                    else
+                    {
+                        TargetDir = Path.Combine(LocalDir, Path.GetFileName(imgpath));
+                        File.Copy(imgpath, TargetDir, true);
+                        r_img.Image = Image.FromFile(TargetDir);
+                    }
 
                     Director_Update.AD = r_name.Text;
                     Director_Update.SOYAD = r_surname.Text;
                     Director_Update.CINSIYET = r_gender;
                     Director_Update.DOGUM = r_date.Value;
-                    Director_Update.RESIM = imgpath;
+                    Director_Update.RESIM = TargetDir;
                     Director_Update.BIO = r_bio.Text;
 
                     ac.SubmitChanges();

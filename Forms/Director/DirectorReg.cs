@@ -163,7 +163,7 @@ namespace Sinema_Otomasyonu
                         SOYAD = r_name.Text,
                         CINSIYET = r_gender,
                         DOGUM = r_date.Value,
-                        RESIM = imgpath,
+                        RESIM = TargetDir,
                         BIO = r_bio.Text
 
                     };
