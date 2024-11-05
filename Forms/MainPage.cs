@@ -1,4 +1,6 @@
 ﻿using Sinema_Otomasyonu.Forms.Actor;
+using Sinema_Otomasyonu.Forms.Movie;
+using Sinema_Otomasyonu.Forms.Saloon;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -72,6 +74,18 @@ namespace Sinema_Otomasyonu
             ActorList ActList = new ActorList();
             Functions.ShowFormCentered(ActList, panel1, panel2, panel3);
 
+        }
+
+        private void Saloon_Reg_Click(object sender, EventArgs e)
+        {
+            SaloonReg SalReg = new SaloonReg();
+            Functions.ShowFormCentered(SalReg, panel1, panel2, panel3);
+        }
+
+        private void movie_reg_Click(object sender, EventArgs e)
+        {
+            MovieReg movieReg = new MovieReg();
+            Functions.ShowFormCentered(movieReg, panel1, panel2, panel3);
         }
     }
 }

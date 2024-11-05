@@ -63,7 +63,7 @@ namespace Sinema_Otomasyonu.Forms.Actor
                         break;
 
                     case 2:
-                        Actor_Query = Actor_Query.OrderBy(d => d.CINSIYET).ToList();
+                     Actor_Query = Actor_Query.OrderBy(d => d.CINSIYET).ToList();
                         // MessageBox.Show("2");
                         break;
 
@@ -86,7 +86,7 @@ namespace Sinema_Otomasyonu.Forms.Actor
                         break;
 
                 }
-
+                
                 foreach (var actor in Actor_Query)
                 {
                     ActorListControl tool = new ActorListControl();

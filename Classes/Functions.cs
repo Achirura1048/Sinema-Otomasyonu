@@ -28,24 +28,6 @@ namespace Sinema_Otomasyonu
             formName.ShowDialog();
         }
 
-        public static void Register(SqlCommand register ,TextBox name , TextBox surname , DateTimePicker bdate , char gender , string img , TextBox bio)
-        {
-            register.Parameters.AddWithValue("@name", name.Text);
-            register.Parameters.AddWithValue("@surname", surname.Text);
-            register.Parameters.AddWithValue("@bdate", bdate.Value.ToString("yyyy-MM-dd"));
-            register.Parameters.AddWithValue("@gender", gender);
-            register.Parameters.AddWithValue("@img", img);
-            register.Parameters.AddWithValue("@bio", bio.Text);
-            register.ExecuteNonQuery();
-
-            name.Text = "";
-            surname.Text = "";
-            bio.Text = "";
-            img = "";
-            bdate.Value = DateTime.Now;
-
-            name.Focus();
-        }
 
         
     }

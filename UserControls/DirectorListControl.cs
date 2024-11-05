@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Media;
 using Sinema_Otomasyonu.Classes;
+using System.IO;
 
 namespace Sinema_Otomasyonu.UserControls
 {
@@ -72,7 +73,7 @@ namespace Sinema_Otomasyonu.UserControls
                     int Director_ID = int.Parse(ID.Text);
 
                     var Director_Delete = ac.Directors.FirstOrDefault(d => d.ID == Director_ID);
-
+                    File.Delete(Director_Delete.RESIM);
                     ac.Directors.DeleteOnSubmit(Director_Delete);
 
                     ac.SubmitChanges();

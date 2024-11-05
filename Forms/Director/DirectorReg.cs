@@ -101,13 +101,13 @@ namespace Sinema_Otomasyonu
                         break;
                 }
 
-                switch (r_surname.Text)
+                switch (error_sname.Text)
                 {
                     case "":
-                        error_surname.Text = "Soyisim Alanı Boş Bırakılamaz";
+                        error_sname.Text = "Soyisim Alanı Boş Bırakılamaz";
                         break;
                     case null:
-                        error_surname.Text = "Soyisim Alanı Boş Bırakılamaz";
+                        error_sname.Text = "Soyisim Alanı Boş Bırakılamaz";
                         break;
                 }
 
@@ -160,7 +160,7 @@ namespace Sinema_Otomasyonu
                     Directors newDirector = new Directors
                     {
                         AD = r_name.Text,
-                        SOYAD = r_name.Text,
+                        SOYAD = r_surname.Text,
                         CINSIYET = r_gender,
                         DOGUM = r_date.Value,
                         RESIM = TargetDir,
@@ -174,11 +174,16 @@ namespace Sinema_Otomasyonu
                 }
 
                 MessageBox.Show("Yönetmen Kaydı Başarılı");
+                r_name.Text = "";
+                r_surname.Text = "";
+                r_bio.Text = "";
+                r_bio.Text = "";
                 r_img.Image = null;
-               
+                r_name.Focus();
 
 
-               // }
+
+                // }
 
 
             }

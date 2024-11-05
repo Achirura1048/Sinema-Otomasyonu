@@ -91,6 +91,7 @@
             // 
             // error_bio
             // 
+            this.error_bio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.error_bio.AutoSize = true;
             this.error_bio.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
             this.error_bio.ForeColor = System.Drawing.Color.Red;

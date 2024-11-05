@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,6 +43,45 @@ namespace Sinema_Otomasyonu.UserControls
 
             MainPage mp = new MainPage();
             Functions.ShowFormCentered(AU, mp.panel1, mp.panel2, mp.panel3);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("OYUNCU SİLMEK ÜZERESİNİZ BU İŞLEMİN GERİ DÖNÜŞÜ YOKTUR !", "OYUNCU SİLME İŞLEMİ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            DialogResult result = MessageBox.Show("Silmek İstedğinizden Emin Misiniz ?", "OYUNCU SİLME İŞLEMİ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+
+            if (result == DialogResult.Yes)
+            {
+
+                using (AchiDBContext ac = new AchiDBContext(Secrets.DB_Path))
+                {
+                    int Actor_ID = int.Parse(ID.Text);
+
+                    var Actor_Delete = ac.Actors.FirstOrDefault(a => a.ID == Actor_ID);
+                    MessageBox.Show(Actor_Delete.RESIM);
+                    File.Delete(Actor_Delete.RESIM);
+
+                    ac.Actors.DeleteOnSubmit(Actor_Delete);
+
+                    ac.SubmitChanges();
+
+                    
+                }
+                
+
+                
+                MessageBox.Show("OYUNCU BAŞARIYLA SİLİNDİ", "OYUNCU SİLME İŞLEMİ", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                this.Hide();
+
+            }
+
+            else if (result == DialogResult.No)
+            {
+                MessageBox.Show("OYUNCU SİLME İŞLEMİ İPTAL EDİLDİ", "OYUNCU SİLME İŞLEMİ", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            }
         }
     }
 }

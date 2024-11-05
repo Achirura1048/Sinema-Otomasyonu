@@ -105,7 +105,7 @@ namespace Sinema_Otomasyonu.Forms.Actor
                         SOYAD = r_name.Text,
                         CINSIYET = r_gender,
                         DOGUM = r_date.Value,
-                        RESIM = imgpath,
+                        RESIM = TargetDir,
                         BIO = r_bio.Text
 
                     };
@@ -115,8 +115,12 @@ namespace Sinema_Otomasyonu.Forms.Actor
                     ac.SubmitChanges();
                 }
 
-                MessageBox.Show("Yönetmen Kaydı Başarılı");
+                MessageBox.Show("Oyuncu Kaydı Başarılı");
+                r_name.Text = "";
+                r_surname.Text = "";
+                r_bio.Text = "";
                 r_img.Image = null;
+                r_name.Focus();
 
 
 
@@ -162,6 +166,11 @@ namespace Sinema_Otomasyonu.Forms.Actor
         private void female_CheckedChanged(object sender, EventArgs e)
         {
             r_gender = 'F';
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

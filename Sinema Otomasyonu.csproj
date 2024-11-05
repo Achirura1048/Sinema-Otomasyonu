@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
@@ -60,7 +63,10 @@
     <Compile Include="Classes\AchiDBContext.cs" />
     <Compile Include="Classes\Tables\Actors.cs" />
     <Compile Include="Classes\Tables\Directors.cs" />
+    <Compile Include="Classes\Tables\Movies.cs" />
+    <Compile Include="Classes\Tables\Saloons.cs" />
     <Compile Include="Classes\Tables\Users.cs" />
+    <Compile Include="Config.cs" />
     <Compile Include="Forms\Actor\ActorList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,20 +116,62 @@
     <Compile Include="Forms\MainPage.Designer.cs">
       <DependentUpon>MainPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Movie\MovieReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Movie\MovieReg.Designer.cs">
+      <DependentUpon>MovieReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Saloon\SaloonReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Saloon\SaloonReg.Designer.cs">
+      <DependentUpon>SaloonReg.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Classes\Secrets.cs" />
+    <Compile Include="test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ActorListControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\ActorListControl.Designer.cs">
       <DependentUpon>ActorListControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ActorListMovie.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ActorListMovie.Designer.cs">
+      <DependentUpon>ActorListMovie.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\DirectorListControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\DirectorListControl.Designer.cs">
       <DependentUpon>DirectorListControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DirectorListMovie.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DirectorListMovie.Designer.cs">
+      <DependentUpon>DirectorListMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\GenreList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\GenreList.Designer.cs">
+      <DependentUpon>GenreList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SaloonListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\SaloonListControl.Designer.cs">
+      <DependentUpon>SaloonListControl.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Forms\Actor\ActorList.resx">
       <DependentUpon>ActorList.cs</DependentUpon>
@@ -149,6 +197,12 @@
     <EmbeddedResource Include="Forms\MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Movie\MovieReg.resx">
+      <DependentUpon>MovieReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Saloon\SaloonReg.resx">
+      <DependentUpon>SaloonReg.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -158,12 +212,28 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="test.resx">
+      <DependentUpon>test.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ActorListControl.resx">
       <DependentUpon>ActorListControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ActorListMovie.resx">
+      <DependentUpon>ActorListMovie.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\DirectorListControl.resx">
       <DependentUpon>DirectorListControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\DirectorListMovie.resx">
+      <DependentUpon>DirectorListMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\GenreList.resx">
+      <DependentUpon>GenreList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\SaloonListControl.resx">
+      <DependentUpon>SaloonListControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Config.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

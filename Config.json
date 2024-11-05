@@ -1,0 +1,12 @@
+{
+  "Colors": [
+    {
+      "Name": "Default",
+      "RGB": [ 0, 59, 11 ]
+    },
+    {
+      "Name": "User",
+      "RGB": [ 0, 0, 0 ]
+    }
+  ]
+}
