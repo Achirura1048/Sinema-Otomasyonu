@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="Forms\Actor\ActorList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Actor\ActorReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Actor\ActorUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Director\DirectorList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Director\DirectorReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Director\DirectorUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\LoginPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\MainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Movie\MovieList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Movie\MovieReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UserControls\ActorListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\DirectorListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\MovieListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
