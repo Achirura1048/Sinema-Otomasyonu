@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Achi_Sinema.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -13,6 +14,6 @@ namespace Achi_Sinema.Tables
 
         public string GenreName { get; set; }
 
-        public ICollection<Movie> GenreMovies { get; set; }
+        public ICollection<GenreMovie> GenreMovies { get; set; }
     }
 }

@@ -37,6 +37,9 @@
     <Compile Update="UserControls\DirectorListControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="UserControls\MovieListActor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UserControls\MovieListControl.cs">
       <SubType>UserControl</SubType>
     </Compile>

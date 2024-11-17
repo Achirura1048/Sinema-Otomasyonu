@@ -69,9 +69,9 @@ namespace Sinema_Otomasyonu.UserControls
 
 
                 }
-                
 
-                
+
+
                 MessageBox.Show("OYUNCU BAŞARIYLA SİLİNDİ", "OYUNCU SİLME İŞLEMİ", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 this.Hide();
 
@@ -82,6 +82,11 @@ namespace Sinema_Otomasyonu.UserControls
                 MessageBox.Show("OYUNCU SİLME İŞLEMİ İPTAL EDİLDİ", "OYUNCU SİLME İŞLEMİ", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             }
+        }
+
+        private void ActorListControl_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

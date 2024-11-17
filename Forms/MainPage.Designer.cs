@@ -33,6 +33,8 @@
             ex_button = new Button();
             label1 = new Label();
             panel2 = new Panel();
+            panel11 = new Panel();
+            button1 = new Button();
             panel6 = new Panel();
             label2 = new Label();
             panel4 = new Panel();
@@ -47,16 +49,14 @@
             panel8 = new Panel();
             movie_reg = new Button();
             panel3 = new Panel();
-            panel11 = new Panel();
-            button1 = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
+            panel11.SuspendLayout();
             panel5.SuspendLayout();
             panel7.SuspendLayout();
             panel10.SuspendLayout();
             panel9.SuspendLayout();
             panel8.SuspendLayout();
-            panel11.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -140,6 +140,34 @@
             panel2.Size = new Size(379, 785);
             panel2.TabIndex = 2;
             panel2.Paint += panel2_Paint;
+            // 
+            // panel11
+            // 
+            panel11.BackColor = Color.White;
+            panel11.Controls.Add(button1);
+            panel11.Location = new Point(1, 313);
+            panel11.Margin = new Padding(4, 3, 4, 3);
+            panel11.Name = "panel11";
+            panel11.Size = new Size(379, 48);
+            panel11.TabIndex = 8;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(0, 59, 111);
+            button1.Cursor = Cursors.Hand;
+            button1.Dock = DockStyle.Top;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            button1.ForeColor = Color.FromArgb(231, 238, 244);
+            button1.Location = new Point(0, 0);
+            button1.Margin = new Padding(4, 3, 4, 3);
+            button1.Name = "button1";
+            button1.Size = new Size(379, 46);
+            button1.TabIndex = 5;
+            button1.Text = "Film Listesi";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // panel6
             // 
@@ -323,33 +351,6 @@
             panel3.Size = new Size(1114, 69);
             panel3.TabIndex = 3;
             // 
-            // panel11
-            // 
-            panel11.BackColor = Color.White;
-            panel11.Controls.Add(button1);
-            panel11.Location = new Point(1, 313);
-            panel11.Margin = new Padding(4, 3, 4, 3);
-            panel11.Name = "panel11";
-            panel11.Size = new Size(379, 48);
-            panel11.TabIndex = 8;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.FromArgb(0, 59, 111);
-            button1.Cursor = Cursors.Hand;
-            button1.Dock = DockStyle.Top;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            button1.ForeColor = Color.FromArgb(231, 238, 244);
-            button1.Location = new Point(0, 0);
-            button1.Margin = new Padding(4, 3, 4, 3);
-            button1.Name = "button1";
-            button1.Size = new Size(379, 46);
-            button1.TabIndex = 5;
-            button1.Text = "Film Listesi";
-            button1.UseVisualStyleBackColor = false;
-            // 
             // MainPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -367,12 +368,12 @@
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            panel11.ResumeLayout(false);
             panel5.ResumeLayout(false);
             panel7.ResumeLayout(false);
             panel10.ResumeLayout(false);
             panel9.ResumeLayout(false);
             panel8.ResumeLayout(false);
-            panel11.ResumeLayout(false);
             ResumeLayout(false);
         }
 

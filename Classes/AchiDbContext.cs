@@ -26,6 +26,14 @@ namespace Achi_Sinema.Classes
 
         public DbSet<Rating> Ratings { get; set; }
 
+        public DbSet<ActorMovie> ActorMovie { get; set; }
+
+        public DbSet<GenreMovie> GenreMovie { get; set; }
+
+        public DbSet<MovieRating> MovieRating { get; set; }
+
+
+
         public static readonly DbContextOptions<AchiDbContext> Options = new DbContextOptionsBuilder<AchiDbContext>().UseSqlServer(Secrets.DB_Path).Options;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -35,6 +43,51 @@ namespace Achi_Sinema.Classes
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<ActorMovie>()
+                .HasKey(am => new { am.MovieActorsActorID, am.ActorMoviesMovieID });
+
+            modelBuilder.Entity<ActorMovie>()
+                .HasOne(am => am.Actor)
+                .WithMany(a => a.ActorMovies)
+                .HasForeignKey(am => am.MovieActorsActorID);
+
+            modelBuilder.Entity<ActorMovie>()
+                .HasOne(am => am.Movie)
+                .WithMany(m => m.MovieActors)
+                .HasForeignKey(am => am.ActorMoviesMovieID);
+
+            modelBuilder.Entity<GenreMovie>()
+                .HasKey(gm => new { gm.MovieGenresGenreID, gm.GenreMoviesMovieID });
+
+            modelBuilder.Entity<GenreMovie>()
+                .HasOne(gm => gm.Genre)
+                .WithMany(g => g.GenreMovies)
+                .HasForeignKey(gm => gm.MovieGenresGenreID);
+
+            modelBuilder.Entity<GenreMovie>()
+                .HasOne(gm => gm.Movie)
+                .WithMany(m => m.MovieGenres)
+                .HasForeignKey(gm => gm.GenreMoviesMovieID);
+
+            modelBuilder.Entity<MovieRating>()
+                .HasKey(mr => new { mr.RatingMoviesMovieID, mr.MovieRatingsRatingId });
+
+            modelBuilder.Entity<MovieRating>()
+                .HasOne(mr => mr.Rating)
+                .WithMany(r => r.RatingMovies)
+                .HasForeignKey(mr => mr.MovieRatingsRatingId);
+
+            modelBuilder.Entity<MovieRating>()
+                .HasOne(mr => mr.Movie)
+                .WithMany(m => m.MovieRatings)
+                .HasForeignKey(mr => mr.RatingMoviesMovieID);
+
+            modelBuilder.Entity<Movie>()
+                .HasOne(m => m.MovieDirector)
+                .WithMany(d => d.Movies)
+                .HasForeignKey(m => m.MovieDirectorDirectorID)
+                .OnDelete(DeleteBehavior.SetNull);
+
             List<Genre> genres = new List<Genre>();
             genres.Add(new Genre {GenreName = "Aksiyon" , GenreID = 1});
             genres.Add(new Genre {GenreName = "Dram" , GenreID = 2 });

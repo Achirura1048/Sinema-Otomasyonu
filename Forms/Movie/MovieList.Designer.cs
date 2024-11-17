@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ListPanel = new FlowLayoutPanel();
+            ListPanelMovie = new FlowLayoutPanel();
             panel1 = new Panel();
             search = new TextBox();
             label3 = new Label();
@@ -39,16 +39,17 @@
             panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // ListPanel
+            // ListPanelMovie
             // 
-            ListPanel.AutoScroll = true;
-            ListPanel.Dock = DockStyle.Fill;
-            ListPanel.FlowDirection = FlowDirection.TopDown;
-            ListPanel.Location = new Point(0, 91);
-            ListPanel.Margin = new Padding(0);
-            ListPanel.Name = "ListPanel";
-            ListPanel.Size = new Size(1352, 696);
-            ListPanel.TabIndex = 8;
+            ListPanelMovie.AutoScroll = true;
+            ListPanelMovie.Dock = DockStyle.Fill;
+            ListPanelMovie.FlowDirection = FlowDirection.TopDown;
+            ListPanelMovie.Location = new Point(0, 91);
+            ListPanelMovie.Margin = new Padding(0);
+            ListPanelMovie.Name = "ListPanelMovie";
+            ListPanelMovie.Size = new Size(1352, 696);
+            ListPanelMovie.TabIndex = 8;
+            ListPanelMovie.Paint += ListPanel_Paint;
             // 
             // panel1
             // 
@@ -73,6 +74,7 @@
             search.Name = "search";
             search.Size = new Size(179, 23);
             search.TabIndex = 5;
+            search.TextChanged += search_TextChanged;
             // 
             // label3
             // 
@@ -146,11 +148,12 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1352, 787);
-            Controls.Add(ListPanel);
+            Controls.Add(ListPanelMovie);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "MovieList";
             Text = "MovieList";
+            Load += MovieList_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -158,7 +161,7 @@
 
         #endregion
 
-        private FlowLayoutPanel ListPanel;
+        private FlowLayoutPanel ListPanelMovie;
         private Panel panel1;
         private TextBox search;
         private Label label3;

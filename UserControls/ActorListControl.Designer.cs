@@ -29,120 +29,129 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ActorListControl));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.ID = new System.Windows.Forms.Label();
-            this.edit = new System.Windows.Forms.PictureBox();
-            this.bio = new System.Windows.Forms.TextBox();
-            this.year = new System.Windows.Forms.Label();
-            this.name = new System.Windows.Forms.Label();
-            this.img = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.edit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.img)).BeginInit();
-            this.SuspendLayout();
+            pictureBox1 = new PictureBox();
+            ID = new Label();
+            edit = new PictureBox();
+            bio = new TextBox();
+            year = new Label();
+            name = new Label();
+            img = new PictureBox();
+            panel1 = new Panel();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)edit).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)img).BeginInit();
+            SuspendLayout();
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(565, 75);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            pictureBox1.BackColor = Color.WhiteSmoke;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(659, 87);
+            pictureBox1.Margin = new Padding(4, 3, 4, 3);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(58, 58);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 15;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // ID
             // 
-            this.ID.AutoSize = true;
-            this.ID.Location = new System.Drawing.Point(19, 4);
-            this.ID.Name = "ID";
-            this.ID.Size = new System.Drawing.Size(0, 13);
-            this.ID.TabIndex = 14;
-            this.ID.Visible = false;
+            ID.AutoSize = true;
+            ID.Location = new Point(22, 5);
+            ID.Margin = new Padding(4, 0, 4, 0);
+            ID.Name = "ID";
+            ID.Size = new Size(0, 15);
+            ID.TabIndex = 14;
+            ID.Visible = false;
             // 
             // edit
             // 
-            this.edit.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.edit.Image = ((System.Drawing.Image)(resources.GetObject("edit.Image")));
-            this.edit.Location = new System.Drawing.Point(565, 18);
-            this.edit.Name = "edit";
-            this.edit.Size = new System.Drawing.Size(50, 50);
-            this.edit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.edit.TabIndex = 13;
-            this.edit.TabStop = false;
-            this.edit.Click += new System.EventHandler(this.edit_Click);
+            edit.BackColor = Color.WhiteSmoke;
+            edit.Image = (Image)resources.GetObject("edit.Image");
+            edit.Location = new Point(659, 21);
+            edit.Margin = new Padding(4, 3, 4, 3);
+            edit.Name = "edit";
+            edit.Size = new Size(58, 58);
+            edit.SizeMode = PictureBoxSizeMode.Zoom;
+            edit.TabIndex = 13;
+            edit.TabStop = false;
+            edit.Click += edit_Click;
             // 
             // bio
             // 
-            this.bio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bio.Enabled = false;
-            this.bio.Location = new System.Drawing.Point(321, 25);
-            this.bio.Multiline = true;
-            this.bio.Name = "bio";
-            this.bio.Size = new System.Drawing.Size(230, 100);
-            this.bio.TabIndex = 12;
+            bio.BorderStyle = BorderStyle.FixedSingle;
+            bio.Enabled = false;
+            bio.Location = new Point(374, 29);
+            bio.Margin = new Padding(4, 3, 4, 3);
+            bio.Multiline = true;
+            bio.Name = "bio";
+            bio.Size = new Size(268, 115);
+            bio.TabIndex = 12;
             // 
             // year
             // 
-            this.year.AutoSize = true;
-            this.year.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold);
-            this.year.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(59)))), ((int)(((byte)(111)))));
-            this.year.Location = new System.Drawing.Point(124, 79);
-            this.year.Name = "year";
-            this.year.Size = new System.Drawing.Size(0, 25);
-            this.year.TabIndex = 11;
+            year.AutoSize = true;
+            year.Font = new Font("Arial Narrow", 15.75F, FontStyle.Bold);
+            year.ForeColor = Color.FromArgb(0, 59, 111);
+            year.Location = new Point(145, 91);
+            year.Margin = new Padding(4, 0, 4, 0);
+            year.Name = "year";
+            year.Size = new Size(0, 25);
+            year.TabIndex = 11;
             // 
             // name
             // 
-            this.name.AutoSize = true;
-            this.name.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(59)))), ((int)(((byte)(111)))));
-            this.name.Location = new System.Drawing.Point(124, 43);
-            this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(0, 25);
-            this.name.TabIndex = 10;
+            name.AutoSize = true;
+            name.Font = new Font("Arial Narrow", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            name.ForeColor = Color.FromArgb(0, 59, 111);
+            name.Location = new Point(145, 50);
+            name.Margin = new Padding(4, 0, 4, 0);
+            name.Name = "name";
+            name.Size = new Size(0, 25);
+            name.TabIndex = 10;
             // 
             // img
             // 
-            this.img.Location = new System.Drawing.Point(18, 25);
-            this.img.Name = "img";
-            this.img.Size = new System.Drawing.Size(100, 100);
-            this.img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.img.TabIndex = 9;
-            this.img.TabStop = false;
+            img.Location = new Point(21, 29);
+            img.Margin = new Padding(4, 3, 4, 3);
+            img.Name = "img";
+            img.Size = new Size(117, 115);
+            img.SizeMode = PictureBoxSizeMode.Zoom;
+            img.TabIndex = 9;
+            img.TabStop = false;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(59)))), ((int)(((byte)(111)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(10, 142);
-            this.panel1.TabIndex = 8;
+            panel1.BackColor = Color.FromArgb(0, 59, 111);
+            panel1.Dock = DockStyle.Left;
+            panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(4, 3, 4, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(12, 164);
+            panel1.TabIndex = 8;
             // 
             // ActorListControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.ID);
-            this.Controls.Add(this.edit);
-            this.Controls.Add(this.bio);
-            this.Controls.Add(this.year);
-            this.Controls.Add(this.name);
-            this.Controls.Add(this.img);
-            this.Controls.Add(this.panel1);
-            this.Name = "ActorListControl";
-            this.Size = new System.Drawing.Size(616, 142);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.edit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.img)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(pictureBox1);
+            Controls.Add(ID);
+            Controls.Add(edit);
+            Controls.Add(bio);
+            Controls.Add(year);
+            Controls.Add(name);
+            Controls.Add(img);
+            Controls.Add(panel1);
+            Margin = new Padding(4, 3, 4, 3);
+            Name = "ActorListControl";
+            Size = new Size(719, 164);
+            Load += ActorListControl_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)edit).EndInit();
+            ((System.ComponentModel.ISupportInitialize)img).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

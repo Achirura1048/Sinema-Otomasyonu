@@ -1,4 +1,5 @@
-﻿using Sinema_Otomasyonu.Forms.Actor;
+﻿using Achi_Sinema.Forms.Movie;
+using Sinema_Otomasyonu.Forms.Actor;
 using Sinema_Otomasyonu.Forms.Movie;
 using System;
 using System.Collections.Generic;
@@ -35,17 +36,17 @@ namespace Sinema_Otomasyonu
 
         private void MainPage_Load(object sender, EventArgs e)
         {
-           label2.Text = "Hoş Geldin " + name +" "+surname.ToUpper();
+            label2.Text = "Hoş Geldin " + name + " " + surname.ToUpper();
         }
 
         public void adminreg_Click(object sender, EventArgs e)
         {
-             DirectorReg DrcReg = new DirectorReg();
+            DirectorReg DrcReg = new DirectorReg();
 
-            Functions.ShowFormCentered(DrcReg, panel1 , panel2 , panel3);
+            Functions.ShowFormCentered(DrcReg, panel1, panel2, panel3);
 
         }
-        
+
         private void adminreg_FormClosed(object sender, FormClosedEventArgs e)
         {
 
@@ -53,7 +54,7 @@ namespace Sinema_Otomasyonu
 
         private void DrcList_Click(object sender, EventArgs e)
         {
-             DirectorList DrcList = new DirectorList();
+            DirectorList DrcList = new DirectorList();
             Functions.ShowFormCentered(DrcList, panel1, panel2, panel3);
         }
 
@@ -77,7 +78,7 @@ namespace Sinema_Otomasyonu
 
         private void Saloon_Reg_Click(object sender, EventArgs e)
         {
-           // SaloonReg SalReg = new SaloonReg();
+            // SaloonReg SalReg = new SaloonReg();
             //Functions.ShowFormCentered(SalReg, panel1, panel2, panel3);
         }
 
@@ -85,6 +86,12 @@ namespace Sinema_Otomasyonu
         {
             MovieReg movieReg = new MovieReg();
             Functions.ShowFormCentered(movieReg, panel1, panel2, panel3);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MovieList movieList = new MovieList();
+            Functions.ShowFormCentered(movieList, panel1, panel2, panel3);
         }
     }
 }

@@ -17,7 +17,7 @@ namespace Sinema_Otomasyonu.Forms.Movie
 {
     public partial class MovieReg : Form
     {
-        
+
 
         public MovieReg()
         {
@@ -105,35 +105,6 @@ namespace Sinema_Otomasyonu.Forms.Movie
                 }
             }
 
-            /* List<string> Genres = new List<string>();
-             Genres.Add("Aksiyon");
-             Genres.Add("Dram");
-             Genres.Add("Komedi");
-             Genres.Add("Korku");
-             Genres.Add("Bilim Kurgu");
-             Genres.Add("Fantastik");
-             Genres.Add("Macera");
-             Genres.Add("Romantik");
-             Genres.Add("Belgesel");
-             Genres.Add("Gerilim");
-             Genres.Add("Gizem");
-             Genres.Add("Suç");
-             Genres.Add("Savaş");
-             Genres.Add("Western");
-             Genres.Add("Animasyon");
-             Genres.Add("Çocuk");
-             Genres.Add("Aile");
-             Genres.Add("Müzikal");
-             Genres.Add("Tarih");
-             Genres.Add("Yerli");
-
-             foreach (var genre in Genres)
-             {
-                 GenreList tool = new GenreList();
-
-                 tool.genre_name.Text = genre;
-                 Genre_List.Controls.Add(tool);
-             }*/
 
         }
 
@@ -148,7 +119,7 @@ namespace Sinema_Otomasyonu.Forms.Movie
 
             else
             {
-                
+
 
 
                 string Account_Name = Environment.UserName;
@@ -181,7 +152,7 @@ namespace Sinema_Otomasyonu.Forms.Movie
                         .ToList();
 
                     var selectedDirectorID = ac.Directors
-                        .Where(d => director_check.CheckedItems.Cast<string>().Contains(d.DirectorName+ " " + d.DirectorSurname))
+                        .Where(d => director_check.CheckedItems.Cast<string>().Contains(d.DirectorName + " " + d.DirectorSurname))
                         .Select(d => d.DirectorID)
                         .First();
 
@@ -190,16 +161,20 @@ namespace Sinema_Otomasyonu.Forms.Movie
                     var selectedRatings = ac.Ratings.Where(r => selectedRatingsID.Contains(r.RatingId)).ToList();
                     var selectedDirector = ac.Directors.FirstOrDefault(d => d.DirectorID == selectedDirectorID);
 
+                    
+                    var actorMovies = selectedActors.Select(a => new ActorMovie { Actor = a }).ToList();
+                    var genreMovies = selectedGenres.Select(g => new GenreMovie { Genre = g }).ToList();
+                    var ratingMovies = selectedRatings.Select(r => new MovieRating { Rating = r }).ToList();
 
                     Achi_Sinema.Tables.Movie newMovie = new Achi_Sinema.Tables.Movie
                     {
                         MovieName = m_name_reg.Text,
-                        MovieGenres = selectedGenres,
-                        MovieActors = selectedActors,
+                        MovieGenres = genreMovies,
+                        MovieActors = actorMovies,
                         MovieDirector = selectedDirector,
                         MovieRelase = r_date.Value,
                         MovieIMBDRating = IMBD.Value.ToString(),
-                        MovieRatings = selectedRatings,
+                        MovieRatings = ratingMovies,
                         MoviePoster = TargetDir,
                         MovieSummary = m_detail_reg.Text
                     };
@@ -214,7 +189,7 @@ namespace Sinema_Otomasyonu.Forms.Movie
 
         private void director_search_TextChanged(object sender, EventArgs e)
         {
- 
+
         }
 
         private void actor_search_TextChanged(object sender, EventArgs e)
@@ -228,6 +203,11 @@ namespace Sinema_Otomasyonu.Forms.Movie
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void director_check_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

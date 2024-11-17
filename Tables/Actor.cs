@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
+using Achi_Sinema.Classes;
 
 namespace Achi_Sinema.Tables
 {
@@ -24,6 +25,6 @@ namespace Achi_Sinema.Tables
 
         public string ActorImage { get; set; }
 
-        public ICollection<Movie> ActorMovies { get; set; }
+        public ICollection<ActorMovie> ActorMovies { get; set; }
     }
 }

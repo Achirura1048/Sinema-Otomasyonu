@@ -222,6 +222,7 @@
             director_check.Name = "director_check";
             director_check.Size = new Size(299, 217);
             director_check.TabIndex = 4;
+            director_check.SelectedIndexChanged += director_check_SelectedIndexChanged;
             // 
             // groupBox1
             // 

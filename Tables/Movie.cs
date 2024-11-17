@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using Achi_Sinema.Classes;
 
 namespace Achi_Sinema.Tables
 {
@@ -13,20 +14,22 @@ namespace Achi_Sinema.Tables
 
         public string MovieName { get; set; }
 
-        public ICollection<Genre> MovieGenres { get; set; }
+        public ICollection<GenreMovie> MovieGenres { get; set; }
 
+        public int MovieDirectorDirectorID { get; set; }
         public Director MovieDirector { get; set; }
 
-        public ICollection<Actor> MovieActors { get; set; }
+        public ICollection<ActorMovie> MovieActors { get; set; }
 
         public DateTime MovieRelase { get; set; }
 
         public string MovieIMBDRating { get; set; }
         
-        public ICollection<Rating> MovieRatings { get; set; }
+        public ICollection<MovieRating> MovieRatings { get; set; }
 
         public string MoviePoster { get; set; }
 
         public string MovieSummary { get; set; }
+
     }
 }
