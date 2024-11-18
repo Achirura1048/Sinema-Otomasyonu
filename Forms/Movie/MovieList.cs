@@ -37,6 +37,7 @@ namespace Achi_Sinema.Forms.Movie
                 foreach (var movie in ac.Movies.ToList())
                 {
                     MovieListControl MLC = new MovieListControl();
+                    MLC.ListMovieID.Text = movie.MovieID.ToString();
                     MLC.ListMovieImg.Image = Image.FromFile(movie.MoviePoster);
                     MLC.ListMovieName.Text = movie.MovieName;
 
@@ -50,6 +51,7 @@ namespace Achi_Sinema.Forms.Movie
                     foreach (var actor in actors)
                     {
                         MovieListActor MVA = new MovieListActor();
+
 
                         MVA.MLActor.Image = Image.FromFile(actor.ActorImage);
                         MVA.MLActorName.Text = actor.ActorName + " " + actor.ActorSurname;

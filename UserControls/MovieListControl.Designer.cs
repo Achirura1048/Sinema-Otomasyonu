@@ -48,7 +48,7 @@
             panel6 = new Panel();
             ListMovieDate = new DateTimePicker();
             label5 = new Label();
-            pictureBox2 = new PictureBox();
+            movie_delete = new PictureBox();
             edit = new PictureBox();
             panel7 = new Panel();
             ListMovieSum = new TextBox();
@@ -71,7 +71,7 @@
             ListMovieDirector.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ListDirectorImg).BeginInit();
             panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)movie_delete).BeginInit();
             ((System.ComponentModel.ISupportInitialize)edit).BeginInit();
             panel7.SuspendLayout();
             panel9.SuspendLayout();
@@ -121,7 +121,7 @@
             ListMoviePanel.Controls.Add(ListMovieRatings);
             ListMoviePanel.Controls.Add(ListMovieDirector);
             ListMoviePanel.Controls.Add(panel6);
-            ListMoviePanel.Controls.Add(pictureBox2);
+            ListMoviePanel.Controls.Add(movie_delete);
             ListMoviePanel.Controls.Add(edit);
             ListMoviePanel.Controls.Add(panel7);
             ListMoviePanel.Controls.Add(panel8);
@@ -284,17 +284,18 @@
             label5.TabIndex = 1;
             label5.Text = "Vizyon Tarihi";
             // 
-            // pictureBox2
+            // movie_delete
             // 
-            pictureBox2.BackColor = Color.WhiteSmoke;
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(519, 276);
-            pictureBox2.Margin = new Padding(4, 3, 4, 3);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(58, 75);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 9;
-            pictureBox2.TabStop = false;
+            movie_delete.BackColor = Color.WhiteSmoke;
+            movie_delete.Image = (Image)resources.GetObject("movie_delete.Image");
+            movie_delete.Location = new Point(519, 276);
+            movie_delete.Margin = new Padding(4, 3, 4, 3);
+            movie_delete.Name = "movie_delete";
+            movie_delete.Size = new Size(58, 75);
+            movie_delete.SizeMode = PictureBoxSizeMode.Zoom;
+            movie_delete.TabIndex = 9;
+            movie_delete.TabStop = false;
+            movie_delete.Click += pictureBox2_Click;
             // 
             // edit
             // 
@@ -443,7 +444,7 @@
             ((System.ComponentModel.ISupportInitialize)ListDirectorImg).EndInit();
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)movie_delete).EndInit();
             ((System.ComponentModel.ISupportInitialize)edit).EndInit();
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
@@ -488,7 +489,7 @@
         public CheckedListBox ListRatingCheck;
         public TextBox ListMovieSum;
         public CheckedListBox ListMovieGenre;
-        public PictureBox pictureBox2;
+        public PictureBox movie_delete;
         public PictureBox edit;
         public Label ListMovieID;
     }
