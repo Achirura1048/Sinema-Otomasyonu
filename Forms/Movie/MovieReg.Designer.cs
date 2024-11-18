@@ -53,6 +53,7 @@
             img_up = new Button();
             groupBox8 = new GroupBox();
             m_detail_reg = new TextBox();
+            label2 = new Label();
             panel1.SuspendLayout();
             movie_name.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
@@ -71,6 +72,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(0, 59, 111);
+            panel1.Controls.Add(label2);
             panel1.Controls.Add(ex_button);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
@@ -402,6 +404,16 @@
             m_detail_reg.Size = new Size(1363, 105);
             m_detail_reg.TabIndex = 1;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.ForeColor = Color.FromArgb(0, 59, 111);
+            label2.Location = new Point(210, 9);
+            label2.Name = "label2";
+            label2.Size = new Size(26, 15);
+            label2.TabIndex = 2;
+            label2.Text = "r_id";
+            // 
             // MovieReg
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -463,5 +475,6 @@
         private System.Windows.Forms.DateTimePicker r_date;
         private System.Windows.Forms.CheckedListBox director_check;
         private System.Windows.Forms.CheckedListBox actor_check;
+        private Label label2;
     }
 }

@@ -25,6 +25,9 @@
     <Compile Update="Forms\MainPage.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\Movie\MoiveUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\Movie\MovieList.cs">
       <SubType>Form</SubType>
     </Compile>
