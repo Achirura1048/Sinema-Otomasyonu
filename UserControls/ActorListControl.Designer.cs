@@ -37,6 +37,8 @@
             name = new Label();
             img = new PictureBox();
             panel1 = new Panel();
+            label1 = new Label();
+            movie_count = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)edit).BeginInit();
             ((System.ComponentModel.ISupportInitialize)img).BeginInit();
@@ -131,10 +133,31 @@
             panel1.Size = new Size(12, 164);
             panel1.TabIndex = 8;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(218, 119);
+            label1.Name = "label1";
+            label1.Size = new Size(68, 15);
+            label1.TabIndex = 16;
+            label1.Text = "FİLM SAYISI";
+            // 
+            // movie_count
+            // 
+            movie_count.AutoSize = true;
+            movie_count.Location = new Point(220, 140);
+            movie_count.Name = "movie_count";
+            movie_count.Size = new Size(38, 15);
+            movie_count.TabIndex = 17;
+            movie_count.Text = "label2";
+            movie_count.Click += movie_count_Click;
+            // 
             // ActorListControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(movie_count);
+            Controls.Add(label1);
             Controls.Add(pictureBox1);
             Controls.Add(ID);
             Controls.Add(edit);
@@ -164,5 +187,7 @@
         public System.Windows.Forms.Label name;
         public System.Windows.Forms.PictureBox img;
         private System.Windows.Forms.Panel panel1;
+        private Label label1;
+        public Label movie_count;
     }
 }

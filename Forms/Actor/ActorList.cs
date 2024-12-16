@@ -64,7 +64,7 @@ namespace Sinema_Otomasyonu.Forms.Actor
                         break;
 
                     case 2:
-                     Actor_Query = Actor_Query.OrderBy(d => d.ActorGender).ToList();
+                        Actor_Query = Actor_Query.OrderBy(d => d.ActorGender).ToList();
                         // MessageBox.Show("2");
                         break;
 
@@ -87,7 +87,7 @@ namespace Sinema_Otomasyonu.Forms.Actor
                         break;
 
                 }
-                
+
                 foreach (var actor in Actor_Query)
                 {
                     ActorListControl tool = new ActorListControl();
@@ -122,13 +122,41 @@ namespace Sinema_Otomasyonu.Forms.Actor
         {
             using (var ac = new AchiDbContext(AchiDbContext.Options))
             {
+
+                
+                
+                
+
+
+
+                
+
+
                 foreach (var actor in ac.Actors.ToList())
                 {
+                    var Actor_ID = actor.ActorID;
+                    var ActorCount = ac.ActorMovie
+                        .Where(m => m.MovieActorsActorID == Actor_ID)
+                        .ToList();
+                    
                     ActorListControl tool = new ActorListControl();
 
                     tool.ID.Text = actor.ActorID.ToString();
                     tool.img.ImageLocation = actor.ActorImage.ToString();
                     tool.name.Text = actor.ActorName + " " + actor.ActorSurname.ToString();
+
+                    int count = ActorCount.Count;
+                    tool.movie_count.Text = count.ToString();
+
+                   
+                    var Actor_Update = ac.Actors
+                    .FirstOrDefault(d => d.ActorID == Actor_ID);
+
+                    Actor_Update.ActorMovieCount = count;
+                   
+
+
+
 
                     DateTime birthDate = Convert.ToDateTime(actor.ActorBirthDate);
                     DateTime Today = DateTime.Now;
@@ -145,7 +173,14 @@ namespace Sinema_Otomasyonu.Forms.Actor
 
                     ListPanel.Controls.Add(tool);
                 }
+
+                ac.SaveChanges();
             }
+        }
+
+        private void ListPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

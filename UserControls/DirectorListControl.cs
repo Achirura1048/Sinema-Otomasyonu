@@ -73,7 +73,7 @@ namespace Sinema_Otomasyonu.UserControls
                     int Director_ID = int.Parse(ID.Text);
 
                     var Director_Delete = ac.Directors.FirstOrDefault(d => d.DirectorID == Director_ID);
-                    File.Delete(Director_Delete.DirectorImage);
+                   // File.Delete(Director_Delete.DirectorImage);
 
                     ac.Remove(Director_Delete);
                     ac.SaveChanges();

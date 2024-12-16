@@ -2,6 +2,7 @@
 using Achi_Sinema.Tables;
 using Microsoft.EntityFrameworkCore;
 using Sinema_Otomasyonu;
+using Sinema_Otomasyonu.Forms.Actor;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -75,6 +76,18 @@ namespace Achi_Sinema.Forms.Movie
                         .Include(m => m.MovieActors)
                         .Include(m => m.MovieRatings)
                         .FirstOrDefault(m=> m.MovieID == Movie_ID);
+
+                    if (imgpath == null)
+                    {
+                        TargetDir = Movie_Update.MoviePoster;
+                    }
+
+                    else
+                    {
+                        TargetDir = Path.Combine(LocalDir, Path.GetFileName(imgpath));
+                        File.Copy(imgpath, TargetDir, true);
+                        r_img.Image = Image.FromFile(TargetDir);
+                    }
 
                     Movie_Update.MovieName = m_name_reg.Text;
                     Movie_Update.MovieRelase = r_date.Value;

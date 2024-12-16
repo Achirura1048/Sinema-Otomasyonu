@@ -1,6 +1,4 @@
-﻿using Achi_Sinema.Tables;
-
-namespace Achi_Sinema.Classes
+﻿namespace Achi_Sinema.Tables
 {
     public class GenreMovie
     {

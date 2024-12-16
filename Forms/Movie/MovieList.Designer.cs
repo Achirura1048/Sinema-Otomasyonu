@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ListPanelMovie = new FlowLayoutPanel();
             panel1 = new Panel();
             search = new TextBox();
             label3 = new Label();
@@ -36,20 +35,9 @@
             label2 = new Label();
             ex_button = new Button();
             label1 = new Label();
+            ListPanelMovie = new FlowLayoutPanel();
             panel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // ListPanelMovie
-            // 
-            ListPanelMovie.AutoScroll = true;
-            ListPanelMovie.Dock = DockStyle.Fill;
-            ListPanelMovie.FlowDirection = FlowDirection.TopDown;
-            ListPanelMovie.Location = new Point(0, 91);
-            ListPanelMovie.Margin = new Padding(0);
-            ListPanelMovie.Name = "ListPanelMovie";
-            ListPanelMovie.Size = new Size(1352, 696);
-            ListPanelMovie.TabIndex = 8;
-            ListPanelMovie.Paint += ListPanel_Paint;
             // 
             // panel1
             // 
@@ -92,12 +80,13 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "İsim", "Cinsiyet (Erkek - Kadın)", "Cinsiyet (Kadın - Erkek)", "Yaş (Büyükten Küçüğe)", "Yaş (Küçükten Büyüğe)" });
+            comboBox1.Items.AddRange(new object[] { "İsim", "Kategori" });
             comboBox1.Location = new Point(408, 57);
             comboBox1.Margin = new Padding(4, 3, 4, 3);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(213, 23);
             comboBox1.TabIndex = 3;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // label2
             // 
@@ -143,6 +132,19 @@
             label1.Text = "[FİLM LİSTESİ]";
             label1.TextAlign = ContentAlignment.MiddleLeft;
             // 
+            // ListPanelMovie
+            // 
+            ListPanelMovie.AutoScroll = true;
+            ListPanelMovie.Dock = DockStyle.Fill;
+            ListPanelMovie.FlowDirection = FlowDirection.TopDown;
+            ListPanelMovie.Location = new Point(0, 91);
+            ListPanelMovie.Margin = new Padding(0);
+            ListPanelMovie.Name = "ListPanelMovie";
+            ListPanelMovie.Size = new Size(1352, 696);
+            ListPanelMovie.TabIndex = 9;
+            ListPanelMovie.WrapContents = false;
+            ListPanelMovie.Paint += ListPanelMovie_Paint;
+            // 
             // MovieList
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -160,8 +162,6 @@
         }
 
         #endregion
-
-        private FlowLayoutPanel ListPanelMovie;
         private Panel panel1;
         private TextBox search;
         private Label label3;
@@ -169,5 +169,6 @@
         private Label label2;
         private Button ex_button;
         private Label label1;
+        private FlowLayoutPanel ListPanelMovie;
     }
 }

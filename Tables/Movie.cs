@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
-using Achi_Sinema.Classes;
 
 namespace Achi_Sinema.Tables
 {

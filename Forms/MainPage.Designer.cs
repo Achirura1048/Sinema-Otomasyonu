@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
             panel1 = new Panel();
             min_button = new Button();
             ex_button = new Button();
             label1 = new Label();
             panel2 = new Panel();
+            excel_report = new Button();
             panel11 = new Panel();
             button1 = new Button();
             panel6 = new Panel();
@@ -124,6 +126,7 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(0, 59, 111);
+            panel2.Controls.Add(excel_report);
             panel2.Controls.Add(panel11);
             panel2.Controls.Add(panel6);
             panel2.Controls.Add(label2);
@@ -140,6 +143,20 @@
             panel2.Size = new Size(379, 785);
             panel2.TabIndex = 2;
             panel2.Paint += panel2_Paint;
+            // 
+            // excel_report
+            // 
+            excel_report.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            excel_report.BackgroundImage = (Image)resources.GetObject("excel_report.BackgroundImage");
+            excel_report.BackgroundImageLayout = ImageLayout.Zoom;
+            excel_report.FlatAppearance.BorderSize = 0;
+            excel_report.FlatStyle = FlatStyle.Flat;
+            excel_report.Location = new Point(4, 713);
+            excel_report.Name = "excel_report";
+            excel_report.Size = new Size(57, 69);
+            excel_report.TabIndex = 9;
+            excel_report.UseVisualStyleBackColor = true;
+            excel_report.Click += excel_report_Click;
             // 
             // panel11
             // 
@@ -399,5 +416,6 @@
         private System.Windows.Forms.Button movie_reg;
         private Panel panel11;
         private Button button1;
+        private Button excel_report;
     }
 }

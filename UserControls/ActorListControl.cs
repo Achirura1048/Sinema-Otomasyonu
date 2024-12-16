@@ -61,17 +61,14 @@ namespace Sinema_Otomasyonu.UserControls
                     int Actor_ID = int.Parse(ID.Text);
 
                     var Actor_Delete = ac.Actors.FirstOrDefault(a => a.ActorID == Actor_ID);
-                    MessageBox.Show(Actor_Delete.ActorImage);
-                    File.Delete(Actor_Delete.ActorImage);
+                    /* MessageBox.Show(Actor_Delete.ActorImage);
+                     File.Delete(Actor_Delete.ActorImage);*/
 
                     ac.Remove(Actor_Delete);
                     ac.SaveChanges();
 
 
                 }
-
-
-
                 MessageBox.Show("OYUNCU BAŞARIYLA SİLİNDİ", "OYUNCU SİLME İŞLEMİ", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 this.Hide();
 
@@ -85,6 +82,11 @@ namespace Sinema_Otomasyonu.UserControls
         }
 
         private void ActorListControl_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void movie_count_Click(object sender, EventArgs e)
         {
 
         }

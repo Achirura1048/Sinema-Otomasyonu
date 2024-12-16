@@ -17,15 +17,15 @@ namespace Sinema_Otomasyonu
 {
     public partial class DirectorUpdate : Form
     {
-       
+
         public DirectorUpdate()
         {
-            InitializeComponent();    
+            InitializeComponent();
         }
         private void AdminReg_Load(object sender, EventArgs e)
         {
 
-            
+
 
         }
 
@@ -43,18 +43,18 @@ namespace Sinema_Otomasyonu
         public string TargetDir;
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Title = "RESİM SEÇME EKRANI";
             ofd.Filter = "Resim Dosyaları | *.jpg; *.jpeg; *.png";
 
             if (ofd.ShowDialog() == DialogResult.OK)
-            {   
-                 imgpath = ofd.FileName;
+            {
+                imgpath = ofd.FileName;
 
                 r_img.Image = Image.FromFile(imgpath);
 
-                
+
             }
         }
 
@@ -65,7 +65,7 @@ namespace Sinema_Otomasyonu
 
         private void r_img_Click(object sender, EventArgs e)
         {
-            
+
         }
         public string r_gender = "M";
         public void male_CheckedChanged(object sender, EventArgs e)
@@ -73,7 +73,7 @@ namespace Sinema_Otomasyonu
             r_gender = "M";
         }
 
-        
+
 
         public void female_CheckedChanged(object sender, EventArgs e)
         {
@@ -187,7 +187,7 @@ namespace Sinema_Otomasyonu
                 this.Close();
                 MainPage mp = new MainPage();
                 DirectorList DrcList = new DirectorList();
-                Functions.ShowFormCentered(DrcList , mp.panel1 , mp.panel2 , mp.panel3);
+                Functions.ShowFormCentered(DrcList, mp.panel1, mp.panel2, mp.panel3);
 
 
 
@@ -274,6 +274,11 @@ namespace Sinema_Otomasyonu
         }
 
         private void r_bio_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
         {
 
         }

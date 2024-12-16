@@ -119,7 +119,7 @@
             error_surname.Margin = new Padding(4, 0, 4, 0);
             error_surname.MaximumSize = new Size(260, 35);
             error_surname.Name = "error_surname";
-            error_surname.Size = new Size(260, 33);
+            error_surname.Size = new Size(260, 0);
             error_surname.TabIndex = 38;
             // 
             // r_bio
@@ -276,7 +276,7 @@
             groupBox3.Margin = new Padding(4, 3, 4, 3);
             groupBox3.Name = "groupBox3";
             groupBox3.Padding = new Padding(4, 3, 4, 3);
-            groupBox3.Size = new Size(1371, 731);
+            groupBox3.Size = new Size(1371, 687);
             groupBox3.TabIndex = 8;
             groupBox3.TabStop = false;
             // 
@@ -303,7 +303,7 @@
             panel2.Location = new Point(4, 19);
             panel2.Margin = new Padding(4, 3, 4, 3);
             panel2.Name = "panel2";
-            panel2.Size = new Size(816, 709);
+            panel2.Size = new Size(816, 665);
             panel2.TabIndex = 5;
             // 
             // groupBox2
@@ -414,7 +414,7 @@
             r_save.FlatStyle = FlatStyle.Flat;
             r_save.Font = new Font("Arial Black", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
             r_save.ForeColor = Color.Snow;
-            r_save.Location = new Point(0, 777);
+            r_save.Location = new Point(0, 733);
             r_save.Margin = new Padding(4, 3, 4, 3);
             r_save.Name = "r_save";
             r_save.Size = new Size(1371, 55);
@@ -427,7 +427,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1371, 832);
+            ClientSize = new Size(1371, 788);
             Controls.Add(groupBox3);
             Controls.Add(panel1);
             Controls.Add(r_save);
