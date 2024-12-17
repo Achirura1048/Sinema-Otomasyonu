@@ -123,17 +123,27 @@ namespace Achi_Sinema.UserControls
                 MU.r_id.Text = Movie_Edit.MovieID.ToString();
                 MU.m_name_reg.Text = Movie_Edit.MovieName.ToString();
                 MU.TargetDir = Movie_Edit.MoviePoster;
-                var director = ac.Directors
+                var directors = ac.Directors
                  .Where(d => d.DirectorID == Movie_Edit.MovieDirectorDirectorID)
                  .FirstOrDefault();
 
-                MU.director_check.Items.Add(director.DirectorName + " " + director.DirectorSurname);
+                foreach (var director in ac.Directors)
+                {
+                    int index = MU.director_check.Items.Add(director.DirectorName + " " + director.DirectorSurname);
+                    if (directors.DirectorID == director.DirectorID)
+                    {
+                        MU.director_check.SetItemChecked(index, true);
+                    }
+                }
+
                 var genres = ac.GenreMovie
                     .Where(gm => gm.GenreMoviesMovieID == Movie_Edit.MovieID)
                     .Select(gm => gm.Genre)
                     .ToList();
 
-                foreach (var genre in ac.Genres)
+               
+
+                    foreach (var genre in ac.Genres)
                 {
                     int index = MU.genre_check.Items.Add(genre.GenreName);
                     if (genres.Contains(genre))
