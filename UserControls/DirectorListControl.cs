@@ -47,7 +47,7 @@ namespace Sinema_Otomasyonu.UserControls
 
 
             MainPage mp = new MainPage();
-            Functions.ShowFormCentered(DU, mp.panel1, mp.panel2, mp.panel3);
+            Functions.ShowFormCentered(DU, mp.panel1, mp.panel2);
 
         }
 

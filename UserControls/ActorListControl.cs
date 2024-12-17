@@ -32,7 +32,7 @@ namespace Sinema_Otomasyonu.UserControls
                 var Actor_Edit = ac.Actors
                     .FirstOrDefault(a => a.ActorID == Actor_ID);
 
-                AU.r_id.Text = Actor_Edit.ActorID.ToString();
+                AU.error_img.Text = Actor_Edit.ActorID.ToString();
                 AU.r_name.Text = Actor_Edit.ActorName.ToString();
                 AU.r_surname.Text = Actor_Edit.ActorSurname.ToString();
                 AU.r_gender = Actor_Edit.ActorGender;
@@ -43,7 +43,7 @@ namespace Sinema_Otomasyonu.UserControls
             }
 
             MainPage mp = new MainPage();
-            Functions.ShowFormCentered(AU, mp.panel1, mp.panel2, mp.panel3);
+            Functions.ShowFormCentered(AU, mp.panel1, mp.panel2);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

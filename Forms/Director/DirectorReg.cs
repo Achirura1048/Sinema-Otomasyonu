@@ -20,14 +20,14 @@ namespace Sinema_Otomasyonu
 {
     public partial class DirectorReg : Form
     {
-        
+
         public DirectorReg()
         {
-            InitializeComponent();    
+            InitializeComponent();
         }
         private void AdminReg_Load(object sender, EventArgs e)
         {
-            
+
             /*r_img.Image = null;
             MessageBox.Show(r_img.ImageLocation);*/
 
@@ -46,18 +46,18 @@ namespace Sinema_Otomasyonu
         private string imgpath = null;
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Title = "RESİM SEÇME EKRANI";
             ofd.Filter = "Resim Dosyaları | *.jpg; *.jpeg; *.png";
 
             if (ofd.ShowDialog() == DialogResult.OK)
-            {   
-                 imgpath = ofd.FileName;
+            {
+                imgpath = ofd.FileName;
 
                 r_img.Image = Image.FromFile(imgpath);
 
-                
+
             }
         }
 
@@ -68,7 +68,7 @@ namespace Sinema_Otomasyonu
 
         private void r_img_Click(object sender, EventArgs e)
         {
-            
+
         }
         public static string r_gender = "M";
         private void male_CheckedChanged(object sender, EventArgs e)
@@ -76,26 +76,26 @@ namespace Sinema_Otomasyonu
             r_gender = "M";
         }
 
-        
+
 
         private void female_CheckedChanged(object sender, EventArgs e)
         {
             r_gender = "F";
         }
 
-        
 
-        
+
+
         private void button2_Click(object sender, EventArgs e)
         {
             if (r_name.Text == "" || r_surname.Text == "" || r_bio.Text == "" || r_img.ImageLocation == null)
             {
-                
+
                 System.Media.SystemSounds.Beep.Play();
 
                 switch (r_name.Text)
                 {
-                    
+
                     case "":
                         error_name.Text = "İsim Alanı Boş Bırakılamaz";
                         break;
@@ -135,29 +135,29 @@ namespace Sinema_Otomasyonu
             else
             {
                 //if (!string.IsNullOrEmpty(imgpath))
-               // {
+                // {
 
-                    string Account_Name = Environment.UserName;
-                    string LocalDir = $@"C:\Users\{Account_Name}\AppData\Local\Achi Cinema\Director_Images";
+                string Account_Name = Environment.UserName;
+                string LocalDir = $@"C:\Users\{Account_Name}\AppData\Local\Achi Cinema\Director_Images";
 
-                    if (!Directory.Exists(LocalDir))
+                if (!Directory.Exists(LocalDir))
+                {
+                    Directory.CreateDirectory(LocalDir);
+
+                    /*string ImgDir = Path.Combine(LocalDir, "Director_Images");
+
+                    if (!Directory.Exists(ImgDir))
                     {
-                        Directory.CreateDirectory(LocalDir);
-
-                        /*string ImgDir = Path.Combine(LocalDir, "Director_Images");
-
-                        if (!Directory.Exists(ImgDir))
-                        {
-                            Directory.CreateDirectory(ImgDir);
-                        }*/
-                    }
+                        Directory.CreateDirectory(ImgDir);
+                    }*/
+                }
 
 
                 string TargetDir = Path.Combine(LocalDir, Path.GetFileName(imgpath));
                 File.Copy(imgpath, TargetDir, true);
                 r_img.Image = Image.FromFile(TargetDir);
 
-               
+
                 using (var ac = new AchiDbContext(AchiDbContext.Options))
                 {
                     Director newDirector = new Director
@@ -179,8 +179,11 @@ namespace Sinema_Otomasyonu
                 r_name.Text = "";
                 r_surname.Text = "";
                 r_bio.Text = "";
-                r_bio.Text = "";
                 r_img.Image = null;
+                error_bio.Text = "";
+                error_img.Text = "";
+                error_name.Text = "";
+                error_surname.Text = "";
                 r_name.Focus();
 
 
@@ -190,7 +193,7 @@ namespace Sinema_Otomasyonu
 
             }
 
-            
+
         }
 
         /*void age()

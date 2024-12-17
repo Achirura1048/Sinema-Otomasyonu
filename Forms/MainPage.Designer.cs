@@ -50,7 +50,6 @@
             Act_Reg = new Button();
             panel8 = new Panel();
             movie_reg = new Button();
-            panel3 = new Panel();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel11.SuspendLayout();
@@ -71,7 +70,7 @@
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(4, 3, 4, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1493, 46);
+            panel1.Size = new Size(1386, 46);
             panel1.TabIndex = 1;
             // 
             // min_button
@@ -83,7 +82,7 @@
             min_button.FlatStyle = FlatStyle.Flat;
             min_button.Font = new Font("Arial", 36F, FontStyle.Regular, GraphicsUnit.Point, 162);
             min_button.ForeColor = SystemColors.InactiveBorder;
-            min_button.Location = new Point(1394, 0);
+            min_button.Location = new Point(1287, 0);
             min_button.Margin = new Padding(4, 3, 4, 3);
             min_button.Name = "min_button";
             min_button.Size = new Size(52, 46);
@@ -101,7 +100,7 @@
             ex_button.FlatStyle = FlatStyle.Flat;
             ex_button.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
             ex_button.ForeColor = SystemColors.InactiveBorder;
-            ex_button.Location = new Point(1446, 0);
+            ex_button.Location = new Point(1339, 0);
             ex_button.Margin = new Padding(4, 3, 4, 3);
             ex_button.Name = "ex_button";
             ex_button.Size = new Size(47, 46);
@@ -140,7 +139,7 @@
             panel2.Location = new Point(0, 46);
             panel2.Margin = new Padding(0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(379, 785);
+            panel2.Size = new Size(379, 742);
             panel2.TabIndex = 2;
             panel2.Paint += panel2_Paint;
             // 
@@ -151,7 +150,7 @@
             excel_report.BackgroundImageLayout = ImageLayout.Zoom;
             excel_report.FlatAppearance.BorderSize = 0;
             excel_report.FlatStyle = FlatStyle.Flat;
-            excel_report.Location = new Point(4, 713);
+            excel_report.Location = new Point(4, 670);
             excel_report.Name = "excel_report";
             excel_report.Size = new Size(57, 69);
             excel_report.TabIndex = 9;
@@ -358,22 +357,11 @@
             movie_reg.UseVisualStyleBackColor = false;
             movie_reg.Click += movie_reg_Click;
             // 
-            // panel3
-            // 
-            panel3.BackColor = Color.FromArgb(0, 59, 111);
-            panel3.Dock = DockStyle.Bottom;
-            panel3.Location = new Point(379, 762);
-            panel3.Margin = new Padding(4, 3, 4, 3);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(1114, 69);
-            panel3.TabIndex = 3;
-            // 
             // MainPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1493, 831);
-            Controls.Add(panel3);
+            ClientSize = new Size(1386, 788);
             Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
@@ -407,7 +395,6 @@
         private System.Windows.Forms.Button DrcList;
         public System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Panel panel2;
-        public System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Button Act_List;
         private System.Windows.Forms.Panel panel9;

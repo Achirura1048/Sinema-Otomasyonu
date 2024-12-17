@@ -116,7 +116,7 @@ namespace Sinema_Otomasyonu.Forms.Actor
 
                     ac.Actors.Add(newActor);
                     ac.SaveChanges();
-                    
+
                 }
 
                 MessageBox.Show("Oyuncu Kaydı Başarılı");
@@ -124,11 +124,15 @@ namespace Sinema_Otomasyonu.Forms.Actor
                 r_surname.Text = "";
                 r_bio.Text = "";
                 r_img.Image = null;
+                error_bio.Text = "";
+                error_img.Text = "";
+                error_name.Text = "";
+                error_surname.Text = "";
                 r_name.Focus();
 
 
 
-                // }
+               
 
 
             }
@@ -173,6 +177,11 @@ namespace Sinema_Otomasyonu.Forms.Actor
         }
 
         private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ActorReg_Load(object sender, EventArgs e)
         {
 
         }

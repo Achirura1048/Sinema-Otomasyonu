@@ -295,6 +295,7 @@
             groupBox2.Size = new Size(415, 466);
             groupBox2.TabIndex = 4;
             groupBox2.TabStop = false;
+            groupBox2.Enter += groupBox2_Enter;
             // 
             // error_img
             // 
@@ -346,7 +347,7 @@
             r_save.FlatStyle = FlatStyle.Flat;
             r_save.Font = new Font("Arial Black", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
             r_save.ForeColor = Color.Snow;
-            r_save.Location = new Point(0, 758);
+            r_save.Location = new Point(0, 714);
             r_save.Margin = new Padding(4, 3, 4, 3);
             r_save.Name = "r_save";
             r_save.Size = new Size(1371, 74);
@@ -409,7 +410,7 @@
             groupBox3.Margin = new Padding(4, 3, 4, 3);
             groupBox3.Name = "groupBox3";
             groupBox3.Padding = new Padding(4, 3, 4, 3);
-            groupBox3.Size = new Size(1371, 712);
+            groupBox3.Size = new Size(1371, 668);
             groupBox3.TabIndex = 5;
             groupBox3.TabStop = false;
             groupBox3.Enter += groupBox3_Enter;
@@ -431,7 +432,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoValidate = AutoValidate.EnablePreventFocusChange;
-            ClientSize = new Size(1371, 832);
+            ClientSize = new Size(1371, 788);
             Controls.Add(groupBox3);
             Controls.Add(r_save);
             Controls.Add(panel1);

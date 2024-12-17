@@ -168,7 +168,7 @@ namespace Achi_Sinema.Forms.Movie
                 this.Close();
                 MainPage mp = new MainPage();
                 MovieList MovList = new MovieList();
-                Functions.ShowFormCentered(MovList, mp.panel1, mp.panel2, mp.panel3);
+                Functions.ShowFormCentered(MovList, mp.panel1, mp.panel2);
             }
         }
     }

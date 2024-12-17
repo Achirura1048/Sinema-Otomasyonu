@@ -11,11 +11,11 @@ namespace Sinema_Otomasyonu
 {
     public static class Functions
     {
-        public static void ShowFormCentered(Form formName , Panel panel1 , Panel panel2 ,  Panel panel3)
+        public static void ShowFormCentered(Form formName , Panel panel1 , Panel panel2)
         {
             var workingAreaWidth = Screen.PrimaryScreen.Bounds.Width - panel2.Width;
 
-            var workingAreaHeight = Screen.PrimaryScreen.Bounds.Height - (panel3.Height + panel1.Height);
+            var workingAreaHeight = Screen.PrimaryScreen.Bounds.Height - panel1.Height;
 
             formName.Size = new System.Drawing.Size(workingAreaWidth, workingAreaHeight);
 

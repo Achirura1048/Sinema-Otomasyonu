@@ -131,6 +131,7 @@
             ListMoviePanel.Name = "ListMoviePanel";
             ListMoviePanel.Size = new Size(656, 614);
             ListMoviePanel.TabIndex = 1;
+            ListMoviePanel.Paint += ListMoviePanel_Paint;
             // 
             // ListMovieImg
             // 

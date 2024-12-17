@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ActorReg));
+            ex_button = new Button();
+            panel1 = new Panel();
+            label1 = new Label();
+            r_save = new Button();
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            panel2 = new Panel();
             error_sname = new Label();
             error_name = new Label();
             label4 = new Label();
@@ -46,24 +52,116 @@
             label3 = new Label();
             r_name = new TextBox();
             label2 = new Label();
-            groupBox3 = new GroupBox();
-            panel2 = new Panel();
             groupBox2 = new GroupBox();
             error_img = new Label();
             r_img = new PictureBox();
             img_up = new Button();
-            ex_button = new Button();
-            panel1 = new Panel();
-            label1 = new Label();
-            r_save = new Button();
+            panel1.SuspendLayout();
+            flowLayoutPanel1.SuspendLayout();
+            panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            groupBox3.SuspendLayout();
-            panel2.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)r_img).BeginInit();
-            panel1.SuspendLayout();
             SuspendLayout();
+            // 
+            // ex_button
+            // 
+            ex_button.BackColor = Color.FromArgb(194, 54, 22);
+            ex_button.Cursor = Cursors.Hand;
+            ex_button.Dock = DockStyle.Right;
+            ex_button.FlatAppearance.BorderSize = 0;
+            ex_button.FlatStyle = FlatStyle.Flat;
+            ex_button.Font = new Font("Arial Narrow", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            ex_button.ForeColor = SystemColors.InactiveBorder;
+            ex_button.Location = new Point(1324, 0);
+            ex_button.Margin = new Padding(4, 3, 4, 3);
+            ex_button.Name = "ex_button";
+            ex_button.Size = new Size(47, 46);
+            ex_button.TabIndex = 1;
+            ex_button.Text = "X";
+            ex_button.UseVisualStyleBackColor = false;
+            ex_button.Click += ex_button_Click;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(0, 59, 111);
+            panel1.Controls.Add(ex_button);
+            panel1.Controls.Add(label1);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(4, 3, 4, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1371, 46);
+            panel1.TabIndex = 6;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 162);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(4, 7);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(206, 28);
+            label1.TabIndex = 0;
+            label1.Text = "[OYUNCU KAYIT]";
+            label1.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // r_save
+            // 
+            r_save.BackColor = Color.FromArgb(0, 59, 111);
+            r_save.Dock = DockStyle.Bottom;
+            r_save.FlatAppearance.BorderSize = 0;
+            r_save.FlatStyle = FlatStyle.Flat;
+            r_save.Font = new Font("Arial Black", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            r_save.ForeColor = Color.Snow;
+            r_save.Location = new Point(0, 733);
+            r_save.Margin = new Padding(4, 3, 4, 3);
+            r_save.Name = "r_save";
+            r_save.Size = new Size(1371, 55);
+            r_save.TabIndex = 7;
+            r_save.Text = "KAYDET";
+            r_save.UseVisualStyleBackColor = false;
+            r_save.Click += r_save_Click;
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.AutoScroll = true;
+            flowLayoutPanel1.Controls.Add(panel2);
+            flowLayoutPanel1.Controls.Add(groupBox2);
+            flowLayoutPanel1.Dock = DockStyle.Fill;
+            flowLayoutPanel1.Location = new Point(0, 46);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(1371, 687);
+            flowLayoutPanel1.TabIndex = 8;
+            // 
+            // panel2
+            // 
+            panel2.AutoSize = true;
+            panel2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            panel2.Controls.Add(error_sname);
+            panel2.Controls.Add(error_name);
+            panel2.Controls.Add(label4);
+            panel2.Controls.Add(error_bio);
+            panel2.Controls.Add(error_surname);
+            panel2.Controls.Add(r_bio);
+            panel2.Controls.Add(pictureBox2);
+            panel2.Controls.Add(pictureBox1);
+            panel2.Controls.Add(female);
+            panel2.Controls.Add(male);
+            panel2.Controls.Add(label7);
+            panel2.Controls.Add(r_date);
+            panel2.Controls.Add(label6);
+            panel2.Controls.Add(r_surname);
+            panel2.Controls.Add(label3);
+            panel2.Controls.Add(r_name);
+            panel2.Controls.Add(label2);
+            panel2.Location = new Point(4, 3);
+            panel2.Margin = new Padding(4, 3, 4, 3);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(580, 678);
+            panel2.TabIndex = 8;
             // 
             // error_sname
             // 
@@ -119,16 +217,16 @@
             error_surname.Margin = new Padding(4, 0, 4, 0);
             error_surname.MaximumSize = new Size(260, 35);
             error_surname.Name = "error_surname";
-            error_surname.Size = new Size(260, 0);
+            error_surname.Size = new Size(260, 35);
             error_surname.TabIndex = 38;
             // 
             // r_bio
             // 
-            r_bio.Location = new Point(10, 307);
+            r_bio.Location = new Point(0, 303);
             r_bio.Margin = new Padding(4, 3, 4, 3);
             r_bio.Multiline = true;
             r_bio.Name = "r_bio";
-            r_bio.Size = new Size(767, 287);
+            r_bio.Size = new Size(576, 173);
             r_bio.TabIndex = 36;
             // 
             // pictureBox2
@@ -266,59 +364,20 @@
             label2.TabIndex = 25;
             label2.Text = "Ad";
             // 
-            // groupBox3
-            // 
-            groupBox3.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            groupBox3.Controls.Add(panel2);
-            groupBox3.Controls.Add(groupBox2);
-            groupBox3.Dock = DockStyle.Fill;
-            groupBox3.Location = new Point(0, 46);
-            groupBox3.Margin = new Padding(4, 3, 4, 3);
-            groupBox3.Name = "groupBox3";
-            groupBox3.Padding = new Padding(4, 3, 4, 3);
-            groupBox3.Size = new Size(1371, 687);
-            groupBox3.TabIndex = 8;
-            groupBox3.TabStop = false;
-            // 
-            // panel2
-            // 
-            panel2.Controls.Add(error_sname);
-            panel2.Controls.Add(error_name);
-            panel2.Controls.Add(label4);
-            panel2.Controls.Add(error_bio);
-            panel2.Controls.Add(error_surname);
-            panel2.Controls.Add(r_bio);
-            panel2.Controls.Add(pictureBox2);
-            panel2.Controls.Add(pictureBox1);
-            panel2.Controls.Add(female);
-            panel2.Controls.Add(male);
-            panel2.Controls.Add(label7);
-            panel2.Controls.Add(r_date);
-            panel2.Controls.Add(label6);
-            panel2.Controls.Add(r_surname);
-            panel2.Controls.Add(label3);
-            panel2.Controls.Add(r_name);
-            panel2.Controls.Add(label2);
-            panel2.Dock = DockStyle.Left;
-            panel2.Location = new Point(4, 19);
-            panel2.Margin = new Padding(4, 3, 4, 3);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(816, 665);
-            panel2.TabIndex = 5;
-            // 
             // groupBox2
             // 
             groupBox2.AutoSize = true;
+            groupBox2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             groupBox2.Controls.Add(error_img);
             groupBox2.Controls.Add(r_img);
             groupBox2.Controls.Add(img_up);
             groupBox2.Font = new Font("Arial", 15.75F);
-            groupBox2.Location = new Point(826, 22);
-            groupBox2.Margin = new Padding(4, 3, 4, 3);
+            groupBox2.Location = new Point(588, 0);
+            groupBox2.Margin = new Padding(0);
             groupBox2.Name = "groupBox2";
             groupBox2.Padding = new Padding(4, 3, 4, 3);
-            groupBox2.Size = new Size(415, 479);
-            groupBox2.TabIndex = 4;
+            groupBox2.Size = new Size(360, 459);
+            groupBox2.TabIndex = 6;
             groupBox2.TabStop = false;
             // 
             // error_img
@@ -326,7 +385,7 @@
             error_img.AutoSize = true;
             error_img.Font = new Font("Arial", 12F, FontStyle.Bold | FontStyle.Underline);
             error_img.ForeColor = Color.Red;
-            error_img.Location = new Point(56, 412);
+            error_img.Location = new Point(57, 412);
             error_img.Margin = new Padding(4, 0, 4, 0);
             error_img.Name = "error_img";
             error_img.Size = new Size(0, 19);
@@ -362,73 +421,12 @@
             img_up.UseVisualStyleBackColor = false;
             img_up.Click += img_up_Click;
             // 
-            // ex_button
-            // 
-            ex_button.BackColor = Color.FromArgb(194, 54, 22);
-            ex_button.Cursor = Cursors.Hand;
-            ex_button.Dock = DockStyle.Right;
-            ex_button.FlatAppearance.BorderSize = 0;
-            ex_button.FlatStyle = FlatStyle.Flat;
-            ex_button.Font = new Font("Arial Narrow", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            ex_button.ForeColor = SystemColors.InactiveBorder;
-            ex_button.Location = new Point(1324, 0);
-            ex_button.Margin = new Padding(4, 3, 4, 3);
-            ex_button.Name = "ex_button";
-            ex_button.Size = new Size(47, 46);
-            ex_button.TabIndex = 1;
-            ex_button.Text = "X";
-            ex_button.UseVisualStyleBackColor = false;
-            ex_button.Click += ex_button_Click;
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.FromArgb(0, 59, 111);
-            panel1.Controls.Add(ex_button);
-            panel1.Controls.Add(label1);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(4, 3, 4, 3);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1371, 46);
-            panel1.TabIndex = 6;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Arial", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 162);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(4, 7);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(206, 28);
-            label1.TabIndex = 0;
-            label1.Text = "[OYUNCU KAYIT]";
-            label1.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // r_save
-            // 
-            r_save.AutoSize = true;
-            r_save.BackColor = Color.FromArgb(0, 59, 111);
-            r_save.Dock = DockStyle.Bottom;
-            r_save.FlatAppearance.BorderSize = 0;
-            r_save.FlatStyle = FlatStyle.Flat;
-            r_save.Font = new Font("Arial Black", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            r_save.ForeColor = Color.Snow;
-            r_save.Location = new Point(0, 733);
-            r_save.Margin = new Padding(4, 3, 4, 3);
-            r_save.Name = "r_save";
-            r_save.Size = new Size(1371, 55);
-            r_save.TabIndex = 7;
-            r_save.Text = "KAYDET";
-            r_save.UseVisualStyleBackColor = false;
-            r_save.Click += r_save_Click;
-            // 
             // ActorReg
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1371, 788);
-            Controls.Add(groupBox3);
+            Controls.Add(flowLayoutPanel1);
             Controls.Add(panel1);
             Controls.Add(r_save);
             FormBorderStyle = FormBorderStyle.None;
@@ -436,49 +434,48 @@
             Name = "ActorReg";
             StartPosition = FormStartPosition.Manual;
             Text = "ActorReg";
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            groupBox3.ResumeLayout(false);
-            groupBox3.PerformLayout();
+            Load += ActorReg_Load;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            flowLayoutPanel1.ResumeLayout(false);
+            flowLayoutPanel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)r_img).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private System.Windows.Forms.Label error_sname;
-        private System.Windows.Forms.Label error_name;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label error_bio;
-        private System.Windows.Forms.Label error_surname;
-        private System.Windows.Forms.TextBox r_bio;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.RadioButton female;
-        private System.Windows.Forms.RadioButton male;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker r_date;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox r_surname;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox r_name;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label error_img;
-        public System.Windows.Forms.PictureBox r_img;
-        private System.Windows.Forms.Button img_up;
         private System.Windows.Forms.Button ex_button;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button r_save;
+        private FlowLayoutPanel flowLayoutPanel1;
+        private Panel panel2;
+        private Label error_sname;
+        private Label error_name;
+        private Label label4;
+        private Label error_bio;
+        private Label error_surname;
+        private TextBox r_bio;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox1;
+        private RadioButton female;
+        private RadioButton male;
+        private Label label7;
+        private DateTimePicker r_date;
+        private Label label6;
+        private TextBox r_surname;
+        private Label label3;
+        private TextBox r_name;
+        private Label label2;
+        private GroupBox groupBox2;
+        private Label error_img;
+        public PictureBox r_img;
+        private Button img_up;
     }
 }

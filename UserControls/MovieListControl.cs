@@ -114,7 +114,7 @@ namespace Achi_Sinema.UserControls
 
             using (var ac = new AchiDbContext(AchiDbContext.Options))
             {
-                
+
                 int Movie_Id = int.Parse(ListMovieID.Text);
 
                 var Movie_Edit = ac.Movies
@@ -175,9 +175,14 @@ namespace Achi_Sinema.UserControls
 
                 }
             }
-                MainPage mp = new MainPage();
-                Functions.ShowFormCentered(MU, mp.panel1, mp.panel2, mp.panel3);
-            
+            MainPage mp = new MainPage();
+            Functions.ShowFormCentered(MU, mp.panel1, mp.panel2);
+
+        }
+
+        private void ListMoviePanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

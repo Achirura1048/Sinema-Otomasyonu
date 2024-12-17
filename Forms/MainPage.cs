@@ -49,7 +49,7 @@ namespace Sinema_Otomasyonu
         {
             DirectorReg DrcReg = new DirectorReg();
 
-            Functions.ShowFormCentered(DrcReg, panel1, panel2, panel3);
+            Functions.ShowFormCentered(DrcReg, panel1, panel2);
 
         }
 
@@ -61,13 +61,13 @@ namespace Sinema_Otomasyonu
         private void DrcList_Click(object sender, EventArgs e)
         {
             DirectorList DrcList = new DirectorList();
-            Functions.ShowFormCentered(DrcList, panel1, panel2, panel3);
+            Functions.ShowFormCentered(DrcList, panel1, panel2);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             ActorReg ActReg = new ActorReg();
-            Functions.ShowFormCentered(ActReg, panel1, panel2, panel3);
+            Functions.ShowFormCentered(ActReg, panel1, panel2);
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -78,7 +78,7 @@ namespace Sinema_Otomasyonu
         private void Act_List_Click(object sender, EventArgs e)
         {
             ActorList ActList = new ActorList();
-            Functions.ShowFormCentered(ActList, panel1, panel2, panel3);
+            Functions.ShowFormCentered(ActList, panel1, panel2);
 
         }
 
@@ -91,13 +91,13 @@ namespace Sinema_Otomasyonu
         private void movie_reg_Click(object sender, EventArgs e)
         {
             MovieReg movieReg = new MovieReg();
-            Functions.ShowFormCentered(movieReg, panel1, panel2, panel3);
+            Functions.ShowFormCentered(movieReg, panel1, panel2);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             MovieList movieList = new MovieList();
-            Functions.ShowFormCentered(movieList, panel1, panel2, panel3);
+            Functions.ShowFormCentered(movieList, panel1, panel2);
         }
 
         private void excel_report_Click(object sender, EventArgs e)

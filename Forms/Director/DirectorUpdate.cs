@@ -187,7 +187,7 @@ namespace Sinema_Otomasyonu
                 this.Close();
                 MainPage mp = new MainPage();
                 DirectorList DrcList = new DirectorList();
-                Functions.ShowFormCentered(DrcList, mp.panel1, mp.panel2, mp.panel3);
+                Functions.ShowFormCentered(DrcList, mp.panel1, mp.panel2);
 
 
 
@@ -279,6 +279,11 @@ namespace Sinema_Otomasyonu
         }
 
         private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
         {
 
         }

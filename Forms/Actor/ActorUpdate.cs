@@ -151,12 +151,16 @@ namespace Sinema_Otomasyonu.Forms.Actor
                     ac.SaveChanges();
                 }
 
-                MessageBox.Show("Yönetmen Güncellendi");
+                error_bio.Text = "";
+                error_img.Text = "";
+                error_surname.Text = "";
+                error_name.Text = "";
+                MessageBox.Show("Oyuncu Güncellendi");
 
                 this.Close();
                 MainPage mp = new MainPage();
                 ActorList ActList = new ActorList();
-                Functions.ShowFormCentered(ActList, mp.panel1, mp.panel2, mp.panel3);
+                Functions.ShowFormCentered(ActList, mp.panel1, mp.panel2);
 
 
 

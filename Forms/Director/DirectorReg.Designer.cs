@@ -29,15 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DirectorReg));
-            groupBox2 = new GroupBox();
-            error_img = new Label();
-            r_img = new PictureBox();
-            img_up = new Button();
             r_save = new Button();
             label1 = new Label();
             panel1 = new Panel();
             ex_button = new Button();
-            groupBox3 = new GroupBox();
+            flowLayoutPanel1 = new FlowLayoutPanel();
             panel2 = new Panel();
             error_sname = new Label();
             error_name = new Label();
@@ -56,71 +52,18 @@
             label3 = new Label();
             r_name = new TextBox();
             label2 = new Label();
-            groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)r_img).BeginInit();
+            groupBox2 = new GroupBox();
+            error_img = new Label();
+            r_img = new PictureBox();
+            img_up = new Button();
             panel1.SuspendLayout();
-            groupBox3.SuspendLayout();
+            flowLayoutPanel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)r_img).BeginInit();
             SuspendLayout();
-            // 
-            // groupBox2
-            // 
-            groupBox2.AutoSize = true;
-            groupBox2.Controls.Add(error_img);
-            groupBox2.Controls.Add(r_img);
-            groupBox2.Controls.Add(img_up);
-            groupBox2.Font = new Font("Arial", 15.75F);
-            groupBox2.Location = new Point(826, 22);
-            groupBox2.Margin = new Padding(4, 3, 4, 3);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Padding = new Padding(4, 3, 4, 3);
-            groupBox2.Size = new Size(415, 479);
-            groupBox2.TabIndex = 4;
-            groupBox2.TabStop = false;
-            // 
-            // error_img
-            // 
-            error_img.AutoSize = true;
-            error_img.Font = new Font("Arial", 12F, FontStyle.Bold | FontStyle.Underline);
-            error_img.ForeColor = Color.Red;
-            error_img.Location = new Point(56, 412);
-            error_img.Margin = new Padding(4, 0, 4, 0);
-            error_img.Name = "error_img";
-            error_img.Size = new Size(0, 19);
-            error_img.TabIndex = 4;
-            // 
-            // r_img
-            // 
-            r_img.BackgroundImage = (Image)resources.GetObject("r_img.BackgroundImage");
-            r_img.BackgroundImageLayout = ImageLayout.Zoom;
-            r_img.BorderStyle = BorderStyle.FixedSingle;
-            r_img.ErrorImage = null;
-            r_img.ImageLocation = "/Assets/Diractor_Images";
-            r_img.Location = new Point(61, 25);
-            r_img.Margin = new Padding(4, 3, 4, 3);
-            r_img.Name = "r_img";
-            r_img.Size = new Size(291, 288);
-            r_img.SizeMode = PictureBoxSizeMode.StretchImage;
-            r_img.TabIndex = 3;
-            r_img.TabStop = false;
-            r_img.Click += r_img_Click_1;
-            // 
-            // img_up
-            // 
-            img_up.BackColor = Color.FromArgb(0, 59, 111);
-            img_up.FlatAppearance.BorderSize = 0;
-            img_up.FlatStyle = FlatStyle.Flat;
-            img_up.ForeColor = Color.Snow;
-            img_up.Location = new Point(149, 321);
-            img_up.Margin = new Padding(4, 3, 4, 3);
-            img_up.Name = "img_up";
-            img_up.Size = new Size(104, 74);
-            img_up.TabIndex = 1;
-            img_up.Text = "Resim Yükle";
-            img_up.UseVisualStyleBackColor = false;
-            img_up.Click += button1_Click;
             // 
             // r_save
             // 
@@ -131,7 +74,7 @@
             r_save.FlatStyle = FlatStyle.Flat;
             r_save.Font = new Font("Arial Black", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
             r_save.ForeColor = Color.Snow;
-            r_save.Location = new Point(0, 777);
+            r_save.Location = new Point(0, 733);
             r_save.Margin = new Padding(4, 3, 4, 3);
             r_save.Name = "r_save";
             r_save.Size = new Size(1371, 55);
@@ -183,22 +126,21 @@
             ex_button.UseVisualStyleBackColor = false;
             ex_button.Click += ex_button_Click;
             // 
-            // groupBox3
+            // flowLayoutPanel1
             // 
-            groupBox3.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            groupBox3.Controls.Add(panel2);
-            groupBox3.Controls.Add(groupBox2);
-            groupBox3.Dock = DockStyle.Fill;
-            groupBox3.Location = new Point(0, 46);
-            groupBox3.Margin = new Padding(4, 3, 4, 3);
-            groupBox3.Name = "groupBox3";
-            groupBox3.Padding = new Padding(4, 3, 4, 3);
-            groupBox3.Size = new Size(1371, 731);
-            groupBox3.TabIndex = 5;
-            groupBox3.TabStop = false;
+            flowLayoutPanel1.AutoScroll = true;
+            flowLayoutPanel1.Controls.Add(panel2);
+            flowLayoutPanel1.Controls.Add(groupBox2);
+            flowLayoutPanel1.Dock = DockStyle.Fill;
+            flowLayoutPanel1.Location = new Point(0, 46);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(1371, 687);
+            flowLayoutPanel1.TabIndex = 12;
             // 
             // panel2
             // 
+            panel2.AutoSize = true;
+            panel2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             panel2.Controls.Add(error_sname);
             panel2.Controls.Add(error_name);
             panel2.Controls.Add(label4);
@@ -216,12 +158,11 @@
             panel2.Controls.Add(label3);
             panel2.Controls.Add(r_name);
             panel2.Controls.Add(label2);
-            panel2.Dock = DockStyle.Left;
-            panel2.Location = new Point(4, 19);
+            panel2.Location = new Point(4, 3);
             panel2.Margin = new Padding(4, 3, 4, 3);
             panel2.Name = "panel2";
-            panel2.Size = new Size(816, 709);
-            panel2.TabIndex = 5;
+            panel2.Size = new Size(580, 678);
+            panel2.TabIndex = 8;
             // 
             // error_sname
             // 
@@ -262,7 +203,7 @@
             error_bio.AutoSize = true;
             error_bio.Font = new Font("Arial", 12F, FontStyle.Bold | FontStyle.Underline);
             error_bio.ForeColor = Color.Red;
-            error_bio.Location = new Point(14, 603);
+            error_bio.Location = new Point(10, 489);
             error_bio.Margin = new Padding(4, 0, 4, 0);
             error_bio.Name = "error_bio";
             error_bio.Size = new Size(0, 19);
@@ -277,16 +218,16 @@
             error_surname.Margin = new Padding(4, 0, 4, 0);
             error_surname.MaximumSize = new Size(260, 35);
             error_surname.Name = "error_surname";
-            error_surname.Size = new Size(260, 33);
+            error_surname.Size = new Size(260, 35);
             error_surname.TabIndex = 38;
             // 
             // r_bio
             // 
-            r_bio.Location = new Point(10, 307);
+            r_bio.Location = new Point(0, 303);
             r_bio.Margin = new Padding(4, 3, 4, 3);
             r_bio.Multiline = true;
             r_bio.Name = "r_bio";
-            r_bio.Size = new Size(767, 287);
+            r_bio.Size = new Size(576, 173);
             r_bio.TabIndex = 36;
             // 
             // pictureBox2
@@ -323,6 +264,7 @@
             female.Size = new Size(14, 13);
             female.TabIndex = 33;
             female.UseVisualStyleBackColor = true;
+            female.CheckedChanged += female_CheckedChanged;
             // 
             // male
             // 
@@ -336,6 +278,7 @@
             male.TabIndex = 32;
             male.TabStop = true;
             male.UseVisualStyleBackColor = true;
+            male.CheckedChanged += male_CheckedChanged;
             // 
             // label7
             // 
@@ -422,13 +365,70 @@
             label2.TabIndex = 25;
             label2.Text = "Ad";
             // 
+            // groupBox2
+            // 
+            groupBox2.AutoSize = true;
+            groupBox2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            groupBox2.Controls.Add(error_img);
+            groupBox2.Controls.Add(r_img);
+            groupBox2.Controls.Add(img_up);
+            groupBox2.Font = new Font("Arial", 15.75F);
+            groupBox2.Location = new Point(588, 0);
+            groupBox2.Margin = new Padding(0);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Padding = new Padding(4, 3, 4, 3);
+            groupBox2.Size = new Size(360, 459);
+            groupBox2.TabIndex = 6;
+            groupBox2.TabStop = false;
+            // 
+            // error_img
+            // 
+            error_img.AutoSize = true;
+            error_img.Font = new Font("Arial", 12F, FontStyle.Bold | FontStyle.Underline);
+            error_img.ForeColor = Color.Red;
+            error_img.Location = new Point(59, 412);
+            error_img.Margin = new Padding(4, 0, 4, 0);
+            error_img.Name = "error_img";
+            error_img.Size = new Size(0, 19);
+            error_img.TabIndex = 4;
+            // 
+            // r_img
+            // 
+            r_img.BackgroundImage = (Image)resources.GetObject("r_img.BackgroundImage");
+            r_img.BackgroundImageLayout = ImageLayout.Zoom;
+            r_img.BorderStyle = BorderStyle.FixedSingle;
+            r_img.ErrorImage = null;
+            r_img.ImageLocation = "/Assets/Diractor_Images";
+            r_img.Location = new Point(61, 25);
+            r_img.Margin = new Padding(4, 3, 4, 3);
+            r_img.Name = "r_img";
+            r_img.Size = new Size(291, 288);
+            r_img.SizeMode = PictureBoxSizeMode.StretchImage;
+            r_img.TabIndex = 3;
+            r_img.TabStop = false;
+            // 
+            // img_up
+            // 
+            img_up.BackColor = Color.FromArgb(0, 59, 111);
+            img_up.FlatAppearance.BorderSize = 0;
+            img_up.FlatStyle = FlatStyle.Flat;
+            img_up.ForeColor = Color.Snow;
+            img_up.Location = new Point(149, 321);
+            img_up.Margin = new Padding(4, 3, 4, 3);
+            img_up.Name = "img_up";
+            img_up.Size = new Size(104, 74);
+            img_up.TabIndex = 1;
+            img_up.Text = "Resim Yükle";
+            img_up.UseVisualStyleBackColor = false;
+            img_up.Click += button1_Click;
+            // 
             // DirectorReg
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoValidate = AutoValidate.EnablePreventFocusChange;
-            ClientSize = new Size(1371, 832);
-            Controls.Add(groupBox3);
+            ClientSize = new Size(1371, 788);
+            Controls.Add(flowLayoutPanel1);
             Controls.Add(r_save);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
@@ -437,48 +437,48 @@
             StartPosition = FormStartPosition.Manual;
             Text = "AdminReg";
             Load += AdminReg_Load;
-            groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)r_img).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            groupBox3.ResumeLayout(false);
-            groupBox3.PerformLayout();
+            flowLayoutPanel1.ResumeLayout(false);
+            flowLayoutPanel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)r_img).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button img_up;
         private System.Windows.Forms.Button r_save;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button ex_button;
-        private System.Windows.Forms.GroupBox groupBox3;
-        public System.Windows.Forms.PictureBox r_img;
-        private System.Windows.Forms.Label error_img;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label error_bio;
-        private System.Windows.Forms.Label error_surname;
-        private System.Windows.Forms.TextBox r_bio;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.RadioButton female;
-        private System.Windows.Forms.RadioButton male;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker r_date;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox r_surname;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox r_name;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label error_sname;
-        private System.Windows.Forms.Label error_name;
+        public FlowLayoutPanel flowLayoutPanel1;
+        public Panel panel2;
+        public Label error_sname;
+        public Label error_name;
+        public Label label4;
+        public Label error_bio;
+        public Label error_surname;
+        public TextBox r_bio;
+        public PictureBox pictureBox2;
+        public PictureBox pictureBox1;
+        public RadioButton female;
+        public RadioButton male;
+        public Label label7;
+        public DateTimePicker r_date;
+        public Label label6;
+        public TextBox r_surname;
+        public Label label3;
+        public TextBox r_name;
+        public Label label2;
+        public GroupBox groupBox2;
+        public Label error_img;
+        public PictureBox r_img;
+        public Button img_up;
     }
 }

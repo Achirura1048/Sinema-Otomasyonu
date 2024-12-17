@@ -29,438 +29,467 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ActorUpdate));
-            this.error_img = new System.Windows.Forms.Label();
-            this.img_up = new System.Windows.Forms.Button();
-            this.error_bio = new System.Windows.Forms.Label();
-            this.error_surname = new System.Windows.Forms.Label();
-            this.error_name = new System.Windows.Forms.Label();
-            this.r_bio = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.r_save = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.female = new System.Windows.Forms.RadioButton();
-            this.label7 = new System.Windows.Forms.Label();
-            this.r_date = new System.Windows.Forms.DateTimePicker();
-            this.r_img = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.ex_button = new System.Windows.Forms.Button();
-            this.male = new System.Windows.Forms.RadioButton();
-            this.r_id = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.r_surname = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.r_name = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.r_img)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.SuspendLayout();
+            error_img = new Label();
+            img_up = new Button();
+            groupBox2 = new GroupBox();
+            r_img = new PictureBox();
+            error_sname = new Label();
+            error_name = new Label();
+            label4 = new Label();
+            error_bio = new Label();
+            error_surname = new Label();
+            r_bio = new TextBox();
+            pictureBox2 = new PictureBox();
+            pictureBox1 = new PictureBox();
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            panel2 = new Panel();
+            female = new RadioButton();
+            male = new RadioButton();
+            label7 = new Label();
+            r_date = new DateTimePicker();
+            label6 = new Label();
+            r_surname = new TextBox();
+            label3 = new Label();
+            r_name = new TextBox();
+            label2 = new Label();
+            r_save = new Button();
+            ex_button = new Button();
+            label1 = new Label();
+            panel1 = new Panel();
+            r_id = new Label();
+            groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)r_img).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            flowLayoutPanel1.SuspendLayout();
+            panel2.SuspendLayout();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // error_img
             // 
-            this.error_img.AutoSize = true;
-            this.error_img.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.error_img.ForeColor = System.Drawing.Color.Red;
-            this.error_img.Location = new System.Drawing.Point(48, 357);
-            this.error_img.Name = "error_img";
-            this.error_img.Size = new System.Drawing.Size(0, 19);
-            this.error_img.TabIndex = 4;
+            error_img.AutoSize = true;
+            error_img.Font = new Font("Arial", 12F, FontStyle.Bold | FontStyle.Underline);
+            error_img.ForeColor = Color.Red;
+            error_img.Location = new Point(58, 412);
+            error_img.Margin = new Padding(4, 0, 4, 0);
+            error_img.Name = "error_img";
+            error_img.Size = new Size(0, 19);
+            error_img.TabIndex = 4;
             // 
             // img_up
             // 
-            this.img_up.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(59)))), ((int)(((byte)(111)))));
-            this.img_up.FlatAppearance.BorderSize = 0;
-            this.img_up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.img_up.ForeColor = System.Drawing.Color.Snow;
-            this.img_up.Location = new System.Drawing.Point(128, 278);
-            this.img_up.Name = "img_up";
-            this.img_up.Size = new System.Drawing.Size(89, 64);
-            this.img_up.TabIndex = 1;
-            this.img_up.Text = "Resim Yükle";
-            this.img_up.UseVisualStyleBackColor = false;
-            this.img_up.Click += new System.EventHandler(this.img_up_Click);
-            // 
-            // error_bio
-            // 
-            this.error_bio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.error_bio.AutoSize = true;
-            this.error_bio.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.error_bio.ForeColor = System.Drawing.Color.Red;
-            this.error_bio.Location = new System.Drawing.Point(10, 564);
-            this.error_bio.Name = "error_bio";
-            this.error_bio.Size = new System.Drawing.Size(0, 19);
-            this.error_bio.TabIndex = 24;
-            // 
-            // error_surname
-            // 
-            this.error_surname.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.error_surname.ForeColor = System.Drawing.Color.Red;
-            this.error_surname.Location = new System.Drawing.Point(342, 100);
-            this.error_surname.MaximumSize = new System.Drawing.Size(223, 30);
-            this.error_surname.Name = "error_surname";
-            this.error_surname.Size = new System.Drawing.Size(223, 30);
-            this.error_surname.TabIndex = 23;
-            // 
-            // error_name
-            // 
-            this.error_name.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.error_name.ForeColor = System.Drawing.Color.Red;
-            this.error_name.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.error_name.Location = new System.Drawing.Point(82, 100);
-            this.error_name.Name = "error_name";
-            this.error_name.Size = new System.Drawing.Size(208, 30);
-            this.error_name.TabIndex = 22;
-            // 
-            // r_bio
-            // 
-            this.r_bio.Location = new System.Drawing.Point(10, 308);
-            this.r_bio.Multiline = true;
-            this.r_bio.Name = "r_bio";
-            this.r_bio.Size = new System.Drawing.Size(658, 249);
-            this.r_bio.TabIndex = 21;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 278);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(93, 24);
-            this.label8.TabIndex = 20;
-            this.label8.Text = "Biyografi";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(449, 176);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(44, 72);
-            this.pictureBox2.TabIndex = 19;
-            this.pictureBox2.TabStop = false;
-            // 
-            // r_save
-            // 
-            this.r_save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(59)))), ((int)(((byte)(111)))));
-            this.r_save.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.r_save.FlatAppearance.BorderSize = 0;
-            this.r_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.r_save.Font = new System.Drawing.Font("Arial Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.r_save.ForeColor = System.Drawing.Color.Snow;
-            this.r_save.Location = new System.Drawing.Point(0, 657);
-            this.r_save.Name = "r_save";
-            this.r_save.Size = new System.Drawing.Size(1175, 64);
-            this.r_save.TabIndex = 6;
-            this.r_save.Text = "KAYDET";
-            this.r_save.UseVisualStyleBackColor = false;
-            this.r_save.Click += new System.EventHandler(this.r_save_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(3, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(306, 28);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "[OYUNCU GÜNCELLEME]";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(362, 176);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(44, 72);
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
-            // 
-            // female
-            // 
-            this.female.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.female.AutoSize = true;
-            this.female.Location = new System.Drawing.Point(429, 188);
-            this.female.Name = "female";
-            this.female.Size = new System.Drawing.Size(14, 13);
-            this.female.TabIndex = 17;
-            this.female.UseVisualStyleBackColor = true;
-            this.female.CheckedChanged += new System.EventHandler(this.female_CheckedChanged);
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(340, 149);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(86, 24);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Cinsiyet";
-            // 
-            // r_date
-            // 
-            this.r_date.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.r_date.CustomFormat = "dd-MM-yyyy";
-            this.r_date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.r_date.Location = new System.Drawing.Point(110, 176);
-            this.r_date.Name = "r_date";
-            this.r_date.Size = new System.Drawing.Size(178, 32);
-            this.r_date.TabIndex = 14;
-            this.r_date.Value = new System.DateTime(2024, 10, 8, 0, 0, 0, 0);
-            // 
-            // r_img
-            // 
-            this.r_img.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("r_img.BackgroundImage")));
-            this.r_img.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.r_img.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.r_img.ErrorImage = null;
-            this.r_img.ImageLocation = "/Assets/Diractor_Images";
-            this.r_img.Location = new System.Drawing.Point(52, 22);
-            this.r_img.Name = "r_img";
-            this.r_img.Size = new System.Drawing.Size(250, 250);
-            this.r_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.r_img.TabIndex = 3;
-            this.r_img.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(59)))), ((int)(((byte)(111)))));
-            this.panel1.Controls.Add(this.ex_button);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1175, 40);
-            this.panel1.TabIndex = 7;
-            // 
-            // ex_button
-            // 
-            this.ex_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(54)))), ((int)(((byte)(22)))));
-            this.ex_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ex_button.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ex_button.FlatAppearance.BorderSize = 0;
-            this.ex_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ex_button.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.ex_button.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.ex_button.Location = new System.Drawing.Point(1135, 0);
-            this.ex_button.Name = "ex_button";
-            this.ex_button.Size = new System.Drawing.Size(40, 40);
-            this.ex_button.TabIndex = 1;
-            this.ex_button.Text = "X";
-            this.ex_button.UseVisualStyleBackColor = false;
-            this.ex_button.Click += new System.EventHandler(this.ex_button_Click);
-            // 
-            // male
-            // 
-            this.male.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.male.AutoSize = true;
-            this.male.Checked = true;
-            this.male.Location = new System.Drawing.Point(342, 188);
-            this.male.Name = "male";
-            this.male.Size = new System.Drawing.Size(14, 13);
-            this.male.TabIndex = 16;
-            this.male.TabStop = true;
-            this.male.UseVisualStyleBackColor = true;
-            this.male.CheckedChanged += new System.EventHandler(this.male_CheckedChanged);
-            // 
-            // r_id
-            // 
-            this.r_id.AutoSize = true;
-            this.r_id.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.r_id.ForeColor = System.Drawing.SystemColors.Control;
-            this.r_id.Location = new System.Drawing.Point(1135, 598);
-            this.r_id.Name = "r_id";
-            this.r_id.Size = new System.Drawing.Size(35, 13);
-            this.r_id.TabIndex = 5;
-            this.r_id.Text = "label4";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(112, 149);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(131, 24);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Doğum Tarihi";
-            // 
-            // r_surname
-            // 
-            this.r_surname.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.r_surname.Location = new System.Drawing.Point(344, 56);
-            this.r_surname.Name = "r_surname";
-            this.r_surname.Size = new System.Drawing.Size(221, 32);
-            this.r_surname.TabIndex = 7;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(340, 28);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 24);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Soyad";
-            // 
-            // r_name
-            // 
-            this.r_name.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.r_name.Location = new System.Drawing.Point(86, 56);
-            this.r_name.Name = "r_name";
-            this.r_name.Size = new System.Drawing.Size(204, 32);
-            this.r_name.TabIndex = 5;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(82, 28);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 24);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Ad";
+            img_up.BackColor = Color.FromArgb(0, 59, 111);
+            img_up.FlatAppearance.BorderSize = 0;
+            img_up.FlatStyle = FlatStyle.Flat;
+            img_up.ForeColor = Color.Snow;
+            img_up.Location = new Point(149, 321);
+            img_up.Margin = new Padding(4, 3, 4, 3);
+            img_up.Name = "img_up";
+            img_up.Size = new Size(104, 74);
+            img_up.TabIndex = 1;
+            img_up.Text = "Resim Yükle";
+            img_up.UseVisualStyleBackColor = false;
+            img_up.Click += img_up_Click;
             // 
             // groupBox2
             // 
-            this.groupBox2.AutoSize = true;
-            this.groupBox2.Controls.Add(this.error_img);
-            this.groupBox2.Controls.Add(this.r_img);
-            this.groupBox2.Controls.Add(this.img_up);
-            this.groupBox2.Font = new System.Drawing.Font("Arial", 15.75F);
-            this.groupBox2.Location = new System.Drawing.Point(723, 55);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(356, 404);
-            this.groupBox2.TabIndex = 4;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            groupBox2.AutoSize = true;
+            groupBox2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            groupBox2.Controls.Add(error_img);
+            groupBox2.Controls.Add(r_img);
+            groupBox2.Controls.Add(img_up);
+            groupBox2.Font = new Font("Arial", 15.75F);
+            groupBox2.Location = new Point(588, 0);
+            groupBox2.Margin = new Padding(0);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Padding = new Padding(4, 3, 4, 3);
+            groupBox2.Size = new Size(360, 459);
+            groupBox2.TabIndex = 6;
+            groupBox2.TabStop = false;
             // 
-            // groupBox1
+            // r_img
             // 
-            this.groupBox1.AutoSize = true;
-            this.groupBox1.Controls.Add(this.error_bio);
-            this.groupBox1.Controls.Add(this.error_surname);
-            this.groupBox1.Controls.Add(this.error_name);
-            this.groupBox1.Controls.Add(this.r_bio);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.pictureBox2);
-            this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Controls.Add(this.female);
-            this.groupBox1.Controls.Add(this.male);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.r_date);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.r_surname);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.r_name);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(59)))), ((int)(((byte)(111)))));
-            this.groupBox1.Location = new System.Drawing.Point(24, 41);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(678, 614);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
+            r_img.BackgroundImage = (Image)resources.GetObject("r_img.BackgroundImage");
+            r_img.BackgroundImageLayout = ImageLayout.Zoom;
+            r_img.BorderStyle = BorderStyle.FixedSingle;
+            r_img.ErrorImage = null;
+            r_img.ImageLocation = "/Assets/Diractor_Images";
+            r_img.Location = new Point(61, 25);
+            r_img.Margin = new Padding(4, 3, 4, 3);
+            r_img.Name = "r_img";
+            r_img.Size = new Size(291, 288);
+            r_img.SizeMode = PictureBoxSizeMode.StretchImage;
+            r_img.TabIndex = 3;
+            r_img.TabStop = false;
             // 
-            // groupBox3
+            // error_sname
             // 
-            this.groupBox3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.groupBox3.Controls.Add(this.r_id);
-            this.groupBox3.Controls.Add(this.groupBox2);
-            this.groupBox3.Controls.Add(this.groupBox1);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox3.Location = new System.Drawing.Point(0, 0);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1175, 721);
-            this.groupBox3.TabIndex = 8;
-            this.groupBox3.TabStop = false;
+            error_sname.AutoSize = true;
+            error_sname.Font = new Font("Arial Narrow", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
+            error_sname.ForeColor = Color.Red;
+            error_sname.Location = new Point(307, 92);
+            error_sname.Margin = new Padding(4, 0, 4, 0);
+            error_sname.Name = "error_sname";
+            error_sname.Size = new Size(0, 20);
+            error_sname.TabIndex = 42;
+            // 
+            // error_name
+            // 
+            error_name.AutoSize = true;
+            error_name.Font = new Font("Arial Narrow", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
+            error_name.ForeColor = Color.Red;
+            error_name.Location = new Point(6, 92);
+            error_name.Margin = new Padding(4, 0, 4, 0);
+            error_name.Name = "error_name";
+            error_name.Size = new Size(0, 20);
+            error_name.TabIndex = 41;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Arial", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.FromArgb(0, 59, 111);
+            label4.Location = new Point(8, 278);
+            label4.Margin = new Padding(4, 0, 4, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(94, 22);
+            label4.TabIndex = 40;
+            label4.Text = "Biyografi";
+            // 
+            // error_bio
+            // 
+            error_bio.AutoSize = true;
+            error_bio.Font = new Font("Arial", 12F, FontStyle.Bold | FontStyle.Underline);
+            error_bio.ForeColor = Color.Red;
+            error_bio.Location = new Point(14, 603);
+            error_bio.Margin = new Padding(4, 0, 4, 0);
+            error_bio.Name = "error_bio";
+            error_bio.Size = new Size(0, 19);
+            error_bio.TabIndex = 39;
+            // 
+            // error_surname
+            // 
+            error_surname.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            error_surname.Font = new Font("Arial", 12F, FontStyle.Bold | FontStyle.Underline);
+            error_surname.ForeColor = Color.Red;
+            error_surname.Location = new Point(312, 92);
+            error_surname.Margin = new Padding(4, 0, 4, 0);
+            error_surname.MaximumSize = new Size(260, 35);
+            error_surname.Name = "error_surname";
+            error_surname.Size = new Size(260, 35);
+            error_surname.TabIndex = 38;
+            // 
+            // r_bio
+            // 
+            r_bio.Location = new Point(0, 303);
+            r_bio.Margin = new Padding(4, 3, 4, 3);
+            r_bio.Multiline = true;
+            r_bio.Name = "r_bio";
+            r_bio.Size = new Size(576, 173);
+            r_bio.TabIndex = 36;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackgroundImage = (Image)resources.GetObject("pictureBox2.BackgroundImage");
+            pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox2.Location = new Point(436, 180);
+            pictureBox2.Margin = new Padding(4, 3, 4, 3);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(50, 53);
+            pictureBox2.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox2.TabIndex = 35;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
+            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox1.Location = new Point(335, 180);
+            pictureBox1.Margin = new Padding(4, 3, 4, 3);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(50, 50);
+            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox1.TabIndex = 34;
+            pictureBox1.TabStop = false;
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.AutoScroll = true;
+            flowLayoutPanel1.Controls.Add(panel2);
+            flowLayoutPanel1.Controls.Add(groupBox2);
+            flowLayoutPanel1.Dock = DockStyle.Fill;
+            flowLayoutPanel1.Location = new Point(0, 46);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(1371, 742);
+            flowLayoutPanel1.TabIndex = 11;
+            // 
+            // panel2
+            // 
+            panel2.AutoSize = true;
+            panel2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            panel2.Controls.Add(error_sname);
+            panel2.Controls.Add(error_name);
+            panel2.Controls.Add(label4);
+            panel2.Controls.Add(error_bio);
+            panel2.Controls.Add(error_surname);
+            panel2.Controls.Add(r_bio);
+            panel2.Controls.Add(pictureBox2);
+            panel2.Controls.Add(pictureBox1);
+            panel2.Controls.Add(female);
+            panel2.Controls.Add(male);
+            panel2.Controls.Add(label7);
+            panel2.Controls.Add(r_date);
+            panel2.Controls.Add(label6);
+            panel2.Controls.Add(r_surname);
+            panel2.Controls.Add(label3);
+            panel2.Controls.Add(r_name);
+            panel2.Controls.Add(label2);
+            panel2.Location = new Point(4, 3);
+            panel2.Margin = new Padding(4, 3, 4, 3);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(580, 678);
+            panel2.TabIndex = 8;
+            // 
+            // female
+            // 
+            female.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            female.AutoSize = true;
+            female.Location = new Point(413, 194);
+            female.Margin = new Padding(4, 3, 4, 3);
+            female.Name = "female";
+            female.Size = new Size(14, 13);
+            female.TabIndex = 33;
+            female.UseVisualStyleBackColor = true;
+            female.Click += female_CheckedChanged;
+            // 
+            // male
+            // 
+            male.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            male.AutoSize = true;
+            male.Checked = true;
+            male.Location = new Point(312, 194);
+            male.Margin = new Padding(4, 3, 4, 3);
+            male.Name = "male";
+            male.Size = new Size(14, 13);
+            male.TabIndex = 32;
+            male.TabStop = true;
+            male.UseVisualStyleBackColor = true;
+            male.Click += male_CheckedChanged;
+            // 
+            // label7
+            // 
+            label7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            label7.AutoSize = true;
+            label7.Font = new Font("Arial", 14.25F, FontStyle.Bold);
+            label7.ForeColor = Color.FromArgb(0, 59, 111);
+            label7.Location = new Point(309, 149);
+            label7.Margin = new Padding(4, 0, 4, 0);
+            label7.Name = "label7";
+            label7.Size = new Size(85, 22);
+            label7.TabIndex = 31;
+            label7.Text = "Cinsiyet";
+            // 
+            // r_date
+            // 
+            r_date.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            r_date.CustomFormat = "dd-MM-yyyy";
+            r_date.Font = new Font("Arial", 14.25F, FontStyle.Bold);
+            r_date.Format = DateTimePickerFormat.Short;
+            r_date.Location = new Point(13, 194);
+            r_date.Margin = new Padding(4, 3, 4, 3);
+            r_date.Name = "r_date";
+            r_date.Size = new Size(207, 29);
+            r_date.TabIndex = 30;
+            r_date.Value = new DateTime(2024, 10, 8, 0, 0, 0, 0);
+            // 
+            // label6
+            // 
+            label6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            label6.AutoSize = true;
+            label6.Font = new Font("Arial", 14.25F, FontStyle.Bold);
+            label6.ForeColor = Color.FromArgb(0, 59, 111);
+            label6.Location = new Point(6, 151);
+            label6.Margin = new Padding(4, 0, 4, 0);
+            label6.Name = "label6";
+            label6.Size = new Size(135, 22);
+            label6.TabIndex = 29;
+            label6.Text = "Doğum Tarihi";
+            // 
+            // r_surname
+            // 
+            r_surname.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            r_surname.Font = new Font("Arial", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            r_surname.Location = new Point(312, 42);
+            r_surname.Margin = new Padding(4, 3, 4, 3);
+            r_surname.Name = "r_surname";
+            r_surname.Size = new Size(257, 32);
+            r_surname.TabIndex = 28;
+            // 
+            // label3
+            // 
+            label3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            label3.AutoSize = true;
+            label3.Font = new Font("Arial", 14.25F, FontStyle.Bold);
+            label3.ForeColor = Color.FromArgb(0, 59, 111);
+            label3.Location = new Point(312, 9);
+            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(69, 22);
+            label3.TabIndex = 27;
+            label3.Text = "Soyad";
+            // 
+            // r_name
+            // 
+            r_name.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            r_name.Font = new Font("Arial", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            r_name.Location = new Point(10, 42);
+            r_name.Margin = new Padding(4, 3, 4, 3);
+            r_name.Name = "r_name";
+            r_name.Size = new Size(237, 32);
+            r_name.TabIndex = 26;
+            // 
+            // label2
+            // 
+            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            label2.AutoSize = true;
+            label2.Font = new Font("Arial", 14.25F, FontStyle.Bold);
+            label2.ForeColor = Color.FromArgb(0, 59, 111);
+            label2.Location = new Point(8, 9);
+            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(35, 22);
+            label2.TabIndex = 25;
+            label2.Text = "Ad";
+            // 
+            // r_save
+            // 
+            r_save.BackColor = Color.FromArgb(0, 59, 111);
+            r_save.Dock = DockStyle.Bottom;
+            r_save.FlatAppearance.BorderSize = 0;
+            r_save.FlatStyle = FlatStyle.Flat;
+            r_save.Font = new Font("Arial Black", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            r_save.ForeColor = Color.Snow;
+            r_save.Location = new Point(0, 733);
+            r_save.Margin = new Padding(4, 3, 4, 3);
+            r_save.Name = "r_save";
+            r_save.Size = new Size(1371, 55);
+            r_save.TabIndex = 10;
+            r_save.Text = "KAYDET";
+            r_save.UseVisualStyleBackColor = false;
+            r_save.Click += r_save_Click;
+            // 
+            // ex_button
+            // 
+            ex_button.BackColor = Color.FromArgb(194, 54, 22);
+            ex_button.Cursor = Cursors.Hand;
+            ex_button.Dock = DockStyle.Right;
+            ex_button.FlatAppearance.BorderSize = 0;
+            ex_button.FlatStyle = FlatStyle.Flat;
+            ex_button.Font = new Font("Arial Narrow", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            ex_button.ForeColor = SystemColors.InactiveBorder;
+            ex_button.Location = new Point(1324, 0);
+            ex_button.Margin = new Padding(4, 3, 4, 3);
+            ex_button.Name = "ex_button";
+            ex_button.Size = new Size(47, 46);
+            ex_button.TabIndex = 1;
+            ex_button.Text = "X";
+            ex_button.UseVisualStyleBackColor = false;
+            ex_button.Click += ex_button_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 162);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(4, 7);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(206, 28);
+            label1.TabIndex = 0;
+            label1.Text = "[OYUNCU KAYIT]";
+            label1.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(0, 59, 111);
+            panel1.Controls.Add(ex_button);
+            panel1.Controls.Add(label1);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(4, 3, 4, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1371, 46);
+            panel1.TabIndex = 9;
+            // 
+            // r_id
+            // 
+            r_id.AutoSize = true;
+            r_id.BackColor = SystemColors.ActiveCaption;
+            r_id.ForeColor = SystemColors.Control;
+            r_id.Location = new Point(1320, 759);
+            r_id.Margin = new Padding(4, 0, 4, 0);
+            r_id.Name = "r_id";
+            r_id.Size = new Size(38, 15);
+            r_id.TabIndex = 44;
+            r_id.Text = "label4";
             // 
             // ActorUpdate
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1175, 721);
-            this.Controls.Add(this.r_save);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.groupBox3);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ActorUpdate";
-            this.Text = "ActorUpdate";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.r_img)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1371, 788);
+            Controls.Add(r_save);
+            Controls.Add(r_id);
+            Controls.Add(flowLayoutPanel1);
+            Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(4, 3, 4, 3);
+            Name = "ActorUpdate";
+            Text = "ActorUpdate";
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)r_img).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            flowLayoutPanel1.ResumeLayout(false);
+            flowLayoutPanel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-
-        private System.Windows.Forms.Label error_img;
-        private System.Windows.Forms.Button img_up;
-        private System.Windows.Forms.Label error_bio;
-        private System.Windows.Forms.Label error_surname;
-        private System.Windows.Forms.Label error_name;
-        public System.Windows.Forms.TextBox r_bio;
-        private System.Windows.Forms.Label label8;
-        public System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button r_save;
-        private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.RadioButton female;
-        private System.Windows.Forms.Label label7;
-        public System.Windows.Forms.DateTimePicker r_date;
-        public System.Windows.Forms.PictureBox r_img;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button ex_button;
-        private System.Windows.Forms.RadioButton male;
-        public System.Windows.Forms.Label r_id;
-        private System.Windows.Forms.Label label6;
-        public System.Windows.Forms.TextBox r_surname;
-        private System.Windows.Forms.Label label3;
-        public System.Windows.Forms.TextBox r_name;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox3;
+        public PictureBox r_img;
+        public Label error_img;
+        public Button img_up;
+        public GroupBox groupBox2;
+        public Label error_sname;
+        public Label error_name;
+        public Label label4;
+        public Label error_bio;
+        public Label error_surname;
+        public TextBox r_bio;
+        public PictureBox pictureBox2;
+        public PictureBox pictureBox1;
+        public FlowLayoutPanel flowLayoutPanel1;
+        public Panel panel2;
+        public RadioButton female;
+        public RadioButton male;
+        public Label label7;
+        public DateTimePicker r_date;
+        public Label label6;
+        public TextBox r_surname;
+        public Label label3;
+        public TextBox r_name;
+        public Label label2;
+        public Button r_save;
+        public Button ex_button;
+        public Label label1;
+        public Panel panel1;
+        public Label r_id;
     }
 }
