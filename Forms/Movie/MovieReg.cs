@@ -161,10 +161,20 @@ namespace Sinema_Otomasyonu.Forms.Movie
                     var selectedRatings = ac.Ratings.Where(r => selectedRatingsID.Contains(r.RatingId)).ToList();
                     var selectedDirector = ac.Directors.FirstOrDefault(d => d.DirectorID == selectedDirectorID);
 
-                    
+
                     var actorMovies = selectedActors.Select(a => new ActorMovie { Actor = a }).ToList();
                     var genreMovies = selectedGenres.Select(g => new GenreMovie { Genre = g }).ToList();
                     var ratingMovies = selectedRatings.Select(r => new MovieRating { Rating = r }).ToList();
+
+                    byte MovieOnAir;
+                    if (show_check.Checked)
+                    {
+                        MovieOnAir = 1;
+                    }
+                    else
+                    {
+                        MovieOnAir = 0;
+                    }
 
                     Achi_Sinema.Tables.Movie newMovie = new Achi_Sinema.Tables.Movie
                     {
@@ -173,10 +183,13 @@ namespace Sinema_Otomasyonu.Forms.Movie
                         MovieActors = actorMovies,
                         MovieDirector = selectedDirector,
                         MovieRelase = r_date.Value,
+                        MovieEnd = r_end.Value,
                         MovieIMBDRating = IMBD.Value.ToString(),
                         MovieRatings = ratingMovies,
                         MoviePoster = TargetDir,
-                        MovieSummary = m_detail_reg.Text
+                        MovieSummary = m_detail_reg.Text,
+                        MovieOnAir = MovieOnAir
+
                     };
 
                     ac.Movies.Add(newMovie);
@@ -208,6 +221,45 @@ namespace Sinema_Otomasyonu.Forms.Movie
         }
 
         private void director_check_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void r_date_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void show_check_CheckedChanged(object sender, EventArgs e)
+        {
+            if (show_check.Checked)
+            {
+                r_end.Value = new DateTime(1753, 1, 1, 0, 0, 0);
+                r_end.Enabled = false;
+
+                r_date.Value = new DateTime(1753, 1, 1, 0, 0, 0);
+                r_date.Enabled = false;
+            }
+
+            else if (!show_check.Checked)
+            {
+                r_date.Enabled = true;
+
+                r_end.Enabled = true;
+            }
+        }
+
+        private void show_check_CheckStateChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void genre_check_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

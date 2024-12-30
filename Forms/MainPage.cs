@@ -17,6 +17,7 @@ using System.Linq;
 using OfficeOpenXml;
 using Achi_Sinema.Tables;
 using Microsoft.VisualBasic.Devices;
+using Achi_Sinema.Forms.Ticket;
 
 
 namespace Sinema_Otomasyonu
@@ -105,43 +106,43 @@ namespace Sinema_Otomasyonu
             ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.Commercial;
             using (var ac = new AchiDbContext(AchiDbContext.Options))
             {
-                    var Movies = ac.Movies
-                    .Select(s => new
-                    {
-                        s.MovieName,
-                        s.MovieDirector,
-                        s.MovieActors,
-                        s.MovieID,
-                    })
-                    .ToList();
+                var Movies = ac.Movies
+                .Select(s => new
+                {
+                    s.MovieName,
+                    s.MovieDirector,
+                    s.MovieActors,
+                    s.MovieID,
+                })
+                .ToList();
 
                 var Directors = ac.Directors
                   .Select(s => new
                   {
-                     s.DirectorName,
-                     s.DirectorSurname,
-                     s.DirectorID,
-                     Movies = s.Movies.Select(m => new
-                     {
-                       m.MovieID,
-                       m.MovieName
+                      s.DirectorName,
+                      s.DirectorSurname,
+                      s.DirectorID,
+                      Movies = s.Movies.Select(m => new
+                      {
+                          m.MovieID,
+                          m.MovieName
 
-                     }).ToList()
+                      }).ToList()
 
-                   }) .ToList();
+                  }).ToList();
 
                 var Actors = ac.Actors
                  .Select(a => new
                  {
-                    a.ActorName,
-                    a.ActorSurname,
-                    a.ActorMovieCount, // Already in your database
-                    Movies = a.ActorMovies.Select(am => new
-                    {
-                       am.Movie.MovieID,
-                       am.Movie.MovieName
-                    }).ToList()
-                  }).ToList();
+                     a.ActorName,
+                     a.ActorSurname,
+                     a.ActorMovieCount,
+                     Movies = a.ActorMovies.Select(am => new
+                     {
+                         am.Movie.MovieID,
+                         am.Movie.MovieName
+                     }).ToList()
+                 }).ToList();
 
                 using (var package = new ExcelPackage())
                 {
@@ -152,18 +153,18 @@ namespace Sinema_Otomasyonu
                     foreach (var movie in Movies)
                     {
                         sheet1.Cells[1, column].Value = movie.MovieName;
-                        sheet1.Cells[2, column].Value = (movie.MovieDirector.DirectorName+ " " + movie.MovieDirector.DirectorSurname).ToUpper();
+                        sheet1.Cells[2, column].Value = (movie.MovieDirector.DirectorName + " " + movie.MovieDirector.DirectorSurname).ToUpper();
                         column++;
                     }
 
                     int row = 3;
-                    
-                    int all_actors =Movies.Max(a => a.MovieActors.Count);
+
+                    int all_actors = Movies.Max(a => a.MovieActors.Count);
 
                     for (int i = 0; i < all_actors; i++)
                     {
                         column = 1;
-                        
+
                         foreach (var movie in Movies)
                         {
                             var actor = ac.ActorMovie
@@ -192,7 +193,7 @@ namespace Sinema_Otomasyonu
 
                     int all_movies = Directors.Max(d => d.Movies.Count);
 
-                    for(int row_dr = 0; row_dr < all_movies; row_dr++)
+                    for (int row_dr = 0; row_dr < all_movies; row_dr++)
                     {
                         for (int col_dr = 0; col_dr < Directors.Count; col_dr++)
                         {
@@ -206,13 +207,13 @@ namespace Sinema_Otomasyonu
 
                     for (int col_dr = 0; col_dr < Directors.Count; col_dr++)
                     {
-                        sheet2.Cells[all_movies + 2, col_dr + 1].Value = $"Movie Count: {Directors[col_dr].Movies.Count}";
+                        sheet2.Cells[all_movies + 2, col_dr + 1].Value = $"Yönetilen  Filmler Toplamı: {Directors[col_dr].Movies.Count}";
                     }
                     sheet2.Cells.AutoFitColumns();
 
                     var sheet3 = package.Workbook.Worksheets.Add("Oyuncular");
 
-                    for(int col_ac = 0; col_ac < Actors.Count; col_ac++)
+                    for (int col_ac = 0; col_ac < Actors.Count; col_ac++)
                     {
                         sheet3.Cells[1, col_ac + 1].Value = Actors[col_ac].ActorName + " " + Actors[col_ac].ActorSurname;
                     }
@@ -235,7 +236,7 @@ namespace Sinema_Otomasyonu
                     {
                         sheet3.Cells[all_movies_ac + 2, col_ac + 1].Value = $"Oynanılan Filmler Toplamı: {Actors[col_ac].Movies.Count}";
                     }
-                        sheet3.Cells.AutoFitColumns();
+                    sheet3.Cells.AutoFitColumns();
 
                     var directoryPath = Path.Combine(Application.StartupPath, "RAPOR");
                     if (!Directory.Exists(directoryPath))
@@ -248,12 +249,18 @@ namespace Sinema_Otomasyonu
                     var fileinfo = new FileInfo(Path.Combine(directoryPath, fileName));
                     package.SaveAs(fileinfo);
 
-                    MessageBox.Show("Rapor başarıyla oluşturuldu.");    
+                    MessageBox.Show("Rapor başarıyla oluşturuldu.");
 
 
                 }
-                
+
             }
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            TicketReg ticketReg = new TicketReg();
+            Functions.ShowFormCentered(ticketReg, panel1, panel2);
         }
     }
 }

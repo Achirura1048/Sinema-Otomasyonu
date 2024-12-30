@@ -32,6 +32,8 @@ namespace Achi_Sinema.Classes
 
         public DbSet<MovieRating> MovieRating { get; set; }
 
+        public DbSet<Saloon> Saloons { get; set; }
+
 
 
         public static readonly DbContextOptions<AchiDbContext> Options = new DbContextOptionsBuilder<AchiDbContext>().UseSqlServer(Secrets.DB_Path).Options;
@@ -123,6 +125,18 @@ namespace Achi_Sinema.Classes
             ratingList.Add(new Rating { RatingName = "Cinsellik/Çıplaklık", RatingId = 11 });
             ratingList.Add(new Rating { RatingName = "Olumsuz Örnek", RatingId = 12});
 
+            List<Saloon> saloons = new List<Saloon>();
+            saloons.Add(new Saloon { SaloonID = 1, SaloonName = "Salon 1" , SaloonCap=50});
+            saloons.Add(new Saloon { SaloonID = 2, SaloonName = "Salon 2", SaloonCap = 50 });
+            saloons.Add(new Saloon { SaloonID = 3, SaloonName = "Salon 3", SaloonCap = 50 });
+            saloons.Add(new Saloon { SaloonID = 4, SaloonName = "Salon 4" , SaloonCap = 50 });
+            saloons.Add(new Saloon { SaloonID = 5, SaloonName = "Salon 5", SaloonCap = 50 });
+            saloons.Add(new Saloon { SaloonID = 6, SaloonName = "Salon 6", SaloonCap = 50 });
+
+            foreach (var saloon in saloons)
+            {
+                modelBuilder.Entity<Saloon>().HasData(saloon);
+            }
 
             foreach (var rating in ratingList)
             {

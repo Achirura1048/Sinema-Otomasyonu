@@ -34,6 +34,8 @@
             ex_button = new Button();
             label1 = new Label();
             panel2 = new Panel();
+            panel3 = new Panel();
+            button2 = new Button();
             excel_report = new Button();
             panel11 = new Panel();
             button1 = new Button();
@@ -52,6 +54,7 @@
             movie_reg = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
+            panel3.SuspendLayout();
             panel11.SuspendLayout();
             panel5.SuspendLayout();
             panel7.SuspendLayout();
@@ -125,6 +128,7 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(0, 59, 111);
+            panel2.Controls.Add(panel3);
             panel2.Controls.Add(excel_report);
             panel2.Controls.Add(panel11);
             panel2.Controls.Add(panel6);
@@ -142,6 +146,34 @@
             panel2.Size = new Size(379, 742);
             panel2.TabIndex = 2;
             panel2.Paint += panel2_Paint;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.White;
+            panel3.Controls.Add(button2);
+            panel3.Location = new Point(-1, 366);
+            panel3.Margin = new Padding(4, 3, 4, 3);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(379, 48);
+            panel3.TabIndex = 10;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.FromArgb(0, 59, 111);
+            button2.Cursor = Cursors.Hand;
+            button2.Dock = DockStyle.Top;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            button2.ForeColor = Color.FromArgb(231, 238, 244);
+            button2.Location = new Point(0, 0);
+            button2.Margin = new Padding(4, 3, 4, 3);
+            button2.Name = "button2";
+            button2.Size = new Size(379, 46);
+            button2.TabIndex = 5;
+            button2.Text = "Bilet Oluştur";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click_1;
             // 
             // excel_report
             // 
@@ -373,6 +405,7 @@
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            panel3.ResumeLayout(false);
             panel11.ResumeLayout(false);
             panel5.ResumeLayout(false);
             panel7.ResumeLayout(false);
@@ -404,5 +437,7 @@
         private Panel panel11;
         private Button button1;
         private Button excel_report;
+        private Panel panel3;
+        private Button button2;
     }
 }

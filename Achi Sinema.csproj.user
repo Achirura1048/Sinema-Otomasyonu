@@ -34,6 +34,9 @@
     <Compile Update="Forms\Movie\MovieReg.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\Ticket\TicketReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="UserControls\ActorListControl.cs">
       <SubType>UserControl</SubType>
     </Compile>

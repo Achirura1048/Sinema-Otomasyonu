@@ -22,6 +22,8 @@ namespace Achi_Sinema.Tables
 
         public DateTime MovieRelase { get; set; }
 
+        public DateTime MovieEnd { get; set; }
+
         public string MovieIMBDRating { get; set; }
         
         public ICollection<MovieRating> MovieRatings { get; set; }
@@ -29,6 +31,10 @@ namespace Achi_Sinema.Tables
         public string MoviePoster { get; set; }
 
         public string MovieSummary { get; set; }
+
+        public byte MovieOnAir { get; set; }
+
+        public double MovieLenght { get; set; }
 
     }
 }
